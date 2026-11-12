@@ -60,8 +60,15 @@ python3 experiments/e18_decision_regret/e18_decision_regret.py \
 
 See `testbed/README.md` for the containerised measurements.
 
-## Status
+## Status and citation
 
-This repository accompanies a manuscript under review. Please do not redistribute
-before publication. A licence and an archived, version-specific DOI will be added on
-publication.
+Archived version: 0.1 (12 November 2026), Zenodo DOI
+[10.5281/zenodo.24171466](https://doi.org/10.5281/zenodo.24171466).
+
+Version 0.1 is a fixed research snapshot supporting the reproducibility of the
+accompanying manuscript, which has not yet been peer-reviewed. The verification
+procedure regenerates the reported computational results from the retained data; the
+physical measurements are included as recorded observations and are not re-executed.
+
+No open-source licence has been granted at this time; all rights are reserved by the
+author.
