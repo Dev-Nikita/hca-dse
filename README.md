@@ -23,6 +23,7 @@ Python 3.10 with the packages pinned in `requirements-lock.txt`:
 ```bash
 python3 -m venv .venv && . .venv/bin/activate
 pip install -r requirements-lock.txt
+pip install pytest    # only for `make test`
 ```
 
 ## Verify the sealed release
