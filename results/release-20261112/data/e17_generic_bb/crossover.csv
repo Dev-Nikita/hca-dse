@@ -1,0 +1,10 @@
+scale,workload,ours_evals,generic_evals,ours_overhead,generic_overhead,exhaustive_overhead,extra_evals,crossover_vs_generic_s,crossover_vs_exhaustive_us
+S1,control,44,44,0.22763,0.42785,0.00942,0,,210.63
+S1,sensing,34,34,0.23388,0.34608,0.00457,0,,219.23
+S1,telemetry,45,43,0.26714,0.51176,0.00651,2,0.1223,251.82
+S2,control,68,68,0.55889,1.30957,0.02706,0,,139.22
+S2,sensing,65,64,0.65987,1.1488,0.01614,1,0.4889,168.38
+S2,telemetry,75,72,0.73254,1.51729,0.03102,3,0.2616,183.98
+S3,control,83,81,3.05063,8.094,0.12779,2,2.5217,84.78
+S3,sensing,122,117,3.99233,8.98396,0.14087,5,0.9983,111.84
+S3,telemetry,93,88,3.09605,8.40276,0.18475,5,1.0613,84.47

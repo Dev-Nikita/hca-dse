@@ -1,0 +1,103 @@
+{
+  "scale": "S1",
+  "workload": "telemetry",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_req": 3000,
+  "warmup": 400,
+  "space": 1296,
+  "analytic_wall": 0.01146746700010226,
+  "analytic_evals": 32,
+  "twolevel_wall": 5.910436528000105,
+  "twolevel_sim_runs": 85,
+  "twolevel_front_size": 17,
+  "inline_wall": 8.118174106999959,
+  "inline_evals": 27,
+  "inline_sim_runs": 135,
+  "inline_front_size": 14,
+  "exh_wall": 432.80870928900015,
+  "exh_evals": 1080,
+  "exh_sim_runs": 5400,
+  "exh_front_size": 17,
+  "inline_recall": 0.8235294117647058,
+  "inline_front_equal": false,
+  "inline_speedup_wall": 53.31355346466485,
+  "inline_missed": 3,
+  "inline_missed_gap_max": 0.7560975609756098,
+  "inline_missed_gap_median": 0.5365853658536583,
+  "inline_missed_within_1pct": 0,
+  "inline_missed_within_5pct": 0,
+  "inline_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005704,
+        348960.0,
+        30.0,
+        16.0
+      ],
+      "gap": 0.2195
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005547,
+        413760.0,
+        37.8,
+        16.0
+      ],
+      "gap": 0.5366
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005524,
+        456960.0,
+        43.2,
+        16.0
+      ],
+      "gap": 0.7561
+    }
+  ],
+  "twolevel_recall": 1.0,
+  "twolevel_front_equal": true,
+  "twolevel_speedup_wall": 73.22787534196704,
+  "twolevel_missed": 0,
+  "twolevel_missed_gap_max": 0.0,
+  "twolevel_missed_gap_median": 0.0,
+  "twolevel_missed_within_1pct": 0,
+  "twolevel_missed_within_5pct": 0,
+  "twolevel_missed_detail": []
+}

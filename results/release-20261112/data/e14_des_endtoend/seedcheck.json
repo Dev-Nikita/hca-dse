@@ -1,0 +1,47 @@
+[
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.05,
+    "candidates": 1831,
+    "sims": 9155,
+    "front0": 26,
+    "front5": 26,
+    "front_stable": 26,
+    "twolevel_recall_1seed": 0.9615384615384616,
+    "twolevel_recall_5seed": 0.9615384615384616,
+    "spread_median": 0.0005338773257449564,
+    "spread_p90": 0.004980577592351907,
+    "spread_max": 0.054621466194808246
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.05,
+    "candidates": 1018,
+    "sims": 5090,
+    "front0": 21,
+    "front5": 22,
+    "front_stable": 21,
+    "twolevel_recall_1seed": 0.7142857142857143,
+    "twolevel_recall_5seed": 0.6818181818181818,
+    "spread_median": 0.03200252330854386,
+    "spread_p90": 0.38777978436521593,
+    "spread_max": 0.4215778533882624
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.05,
+    "candidates": 1508,
+    "sims": 7540,
+    "front0": 25,
+    "front5": 26,
+    "front_stable": 25,
+    "twolevel_recall_1seed": 1.0,
+    "twolevel_recall_5seed": 1.0,
+    "spread_median": 0.0008163086223770234,
+    "spread_p90": 0.00733603946217771,
+    "spread_max": 0.05894421302855399
+  }
+]

@@ -1,0 +1,218 @@
+{
+  "scale": "S2",
+  "workload": "telemetry",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_req": 3000,
+  "warmup": 400,
+  "space": 5832,
+  "analytic_wall": 0.03996060600002238,
+  "analytic_evals": 46,
+  "twolevel_wall": 10.187755167999967,
+  "twolevel_sim_runs": 135,
+  "twolevel_front_size": 24,
+  "inline_wall": 13.494308020000062,
+  "inline_evals": 38,
+  "inline_sim_runs": 190,
+  "inline_front_size": 18,
+  "exh_wall": 1699.391036235,
+  "exh_evals": 3888,
+  "exh_sim_runs": 19440,
+  "exh_front_size": 25,
+  "inline_recall": 0.68,
+  "inline_front_equal": false,
+  "inline_speedup_wall": 125.93391478216697,
+  "inline_missed": 8,
+  "inline_missed_gap_max": 0.5652173913043479,
+  "inline_missed_gap_median": 0.1862266857962696,
+  "inline_missed_within_1pct": 0,
+  "inline_missed_within_5pct": 0,
+  "inline_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005704,
+        348960.0,
+        30.0,
+        16.0
+      ],
+      "gap": 0.2195
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-med",
+        "gw_cls": "gw-high",
+        "link_cls": "standard",
+        "n_e": 3,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.01521,
+        301632.0,
+        19.6,
+        16.0
+      ],
+      "gap": 0.1111
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 3,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005562,
+        359760.0,
+        31.2,
+        16.0
+      ],
+      "gap": 0.2683
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 3,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005544,
+        402960.0,
+        36.6,
+        16.0
+      ],
+      "gap": 0.2824
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-high",
+        "edge_cls": "edge-low",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 4,
+        "policy": "cloud-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.022797,
+        393984.0,
+        43.2,
+        12.0
+      ],
+      "gap": 0.5652
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005524,
+        456960.0,
+        43.2,
+        16.0
+      ],
+      "gap": 0.1529
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 4,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005523,
+        543360.0,
+        54.0,
+        16.0
+      ],
+      "gap": 0.0588
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 6,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005521,
+        564960.0,
+        56.4,
+        16.0
+      ],
+      "gap": 0.1059
+    }
+  ],
+  "twolevel_recall": 0.96,
+  "twolevel_front_equal": false,
+  "twolevel_speedup_wall": 166.80721201200794,
+  "twolevel_missed": 1,
+  "twolevel_missed_gap_max": 0.042553191489361555,
+  "twolevel_missed_gap_median": 0.042553191489361555,
+  "twolevel_missed_within_1pct": 0,
+  "twolevel_missed_within_5pct": 1,
+  "twolevel_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 4,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005523,
+        543360.0,
+        54.0,
+        16.0
+      ],
+      "gap": 0.0426
+    }
+  ]
+}

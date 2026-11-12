@@ -1,0 +1,22 @@
+{'raw': 1296, 'workload': 'telemetry', 'nodes': 307, 'evals': 63, 'pareto': 24, 'runtime': 1.4285, 'peak_kib': 120.7, 'visited_frac': 0.2368827160493827}
+{'raw': 1296, 'workload': 'control', 'nodes': 290, 'evals': 56, 'pareto': 22, 'runtime': 1.3908, 'peak_kib': 108.6, 'visited_frac': 0.22376543209876543}
+{'raw': 1296, 'workload': 'sensing', 'nodes': 255, 'evals': 39, 'pareto': 10, 'runtime': 1.2207, 'peak_kib': 78.9, 'visited_frac': 0.19675925925925927}
+{'raw': 5832, 'workload': 'telemetry', 'nodes': 730, 'evals': 88, 'pareto': 30, 'runtime': 3.9367, 'peak_kib': 181.1, 'visited_frac': 0.12517146776406035}
+{'raw': 5832, 'workload': 'control', 'nodes': 706, 'evals': 78, 'pareto': 27, 'runtime': 4.1802, 'peak_kib': 170.0, 'visited_frac': 0.1210562414266118}
+{'raw': 5832, 'workload': 'sensing', 'nodes': 695, 'evals': 76, 'pareto': 18, 'runtime': 3.4679, 'peak_kib': 120.4, 'visited_frac': 0.11917009602194788}
+{'raw': 51840, 'workload': 'telemetry', 'nodes': 2786, 'evals': 97, 'pareto': 32, 'runtime': 16.8521, 'peak_kib': 133.8, 'visited_frac': 0.05374228395061728}
+{'raw': 51840, 'workload': 'control', 'nodes': 2762, 'evals': 87, 'pareto': 29, 'runtime': 16.7687, 'peak_kib': 124.8, 'visited_frac': 0.053279320987654324}
+{'raw': 51840, 'workload': 'sensing', 'nodes': 3590, 'evals': 142, 'pareto': 27, 'runtime': 20.9745, 'peak_kib': 184.2, 'visited_frac': 0.06925154320987655}
+{'raw': 345600, 'workload': 'telemetry', 'nodes': 5132, 'evals': 98, 'pareto': 33, 'runtime': 34.7942, 'peak_kib': 136.6, 'visited_frac': 0.014849537037037038}
+{'raw': 345600, 'workload': 'control', 'nodes': 5104, 'evals': 88, 'pareto': 30, 'runtime': 35.5803, 'peak_kib': 142.7, 'visited_frac': 0.01476851851851852}
+{'raw': 345600, 'workload': 'sensing', 'nodes': 8320, 'evals': 146, 'pareto': 30, 'runtime': 60.0808, 'peak_kib': 209.5, 'visited_frac': 0.024074074074074074}
+{'raw': 2764800, 'workload': 'telemetry', 'nodes': 8065, 'evals': 98, 'pareto': 33, 'runtime': 60.7754, 'peak_kib': 166.8, 'visited_frac': 0.0029170283564814814}
+{'raw': 2764800, 'workload': 'control', 'nodes': 8037, 'evals': 88, 'pareto': 30, 'runtime': 60.6345, 'peak_kib': 160.9, 'visited_frac': 0.0029069010416666666}
+{'raw': 2764800, 'workload': 'sensing', 'nodes': 14081, 'evals': 148, 'pareto': 32, 'runtime': 118.2018, 'peak_kib': 225.0, 'visited_frac': 0.005092954282407408}
+{'raw': 15552000, 'workload': 'telemetry', 'nodes': 9292, 'evals': 98, 'pareto': 33, 'runtime': 72.3721, 'peak_kib': 170.5, 'visited_frac': 0.0005974794238683128}
+{'raw': 15552000, 'workload': 'control', 'nodes': 9264, 'evals': 88, 'pareto': 30, 'runtime': 68.7719, 'peak_kib': 143.8, 'visited_frac': 0.0005956790123456791}
+{'raw': 15552000, 'workload': 'sensing', 'nodes': 16442, 'evals': 148, 'pareto': 32, 'runtime': 140.6114, 'peak_kib': 200.4, 'visited_frac': 0.001057227366255144}
+{'raw': 82944000, 'workload': 'telemetry', 'nodes': 10373, 'evals': 98, 'pareto': 33, 'runtime': 79.8529, 'peak_kib': 144.5, 'visited_frac': 0.00012506028163580246}
+{'raw': 82944000, 'workload': 'control', 'nodes': 10345, 'evals': 88, 'pareto': 30, 'runtime': 80.2605, 'peak_kib': 138.8, 'visited_frac': 0.00012472270447530864}
+{'raw': 82944000, 'workload': 'sensing', 'nodes': 18181, 'evals': 148, 'pareto': 32, 'runtime': 167.4905, 'peak_kib': 199.4, 'visited_frac': 0.00021919608410493827}
+written results/e5_scalability.csv

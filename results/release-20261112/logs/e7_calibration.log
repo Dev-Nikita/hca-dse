@@ -1,0 +1,3 @@
+{'workload': 'control', 'n_test': 20, 'a': 1.0033, 'b': -0.000537, 'MAPE_raw': 7.6, 'MAPE_calibrated': np.float64(6.3), 'spearman_test': np.float64(0.98)}
+{'workload': 'sensing', 'n_test': 20, 'a': 0.7258, 'b': 0.020992, 'MAPE_raw': 22.9, 'MAPE_calibrated': np.float64(25.7), 'spearman_test': np.float64(0.946)}
+{'workload': 'telemetry', 'n_test': 20, 'a': 0.9379, 'b': 7.7e-05, 'MAPE_raw': 5.4, 'MAPE_calibrated': np.float64(5.8), 'spearman_test': np.float64(0.989)}

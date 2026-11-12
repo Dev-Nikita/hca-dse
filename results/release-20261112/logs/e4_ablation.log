@@ -1,0 +1,25 @@
+{'scale': 'S2', 'workload': 'telemetry', 'variant': 'structural-only', 'nodes': 6925, 'evals': 3888, 't': 0.9894, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'telemetry', 'variant': 'struct+feasibility', 'nodes': 5036, 'evals': 2714, 't': 1.4055, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'telemetry', 'variant': 'struct+dominance', 'nodes': 756, 'evals': 121, 't': 0.5039, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'telemetry', 'variant': 'HCA-full', 'nodes': 633, 'evals': 75, 't': 0.459, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'control', 'variant': 'structural-only', 'nodes': 6925, 'evals': 3888, 't': 0.8263, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'control', 'variant': 'struct+feasibility', 'nodes': 3841, 'evals': 1923, 't': 1.246, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'control', 'variant': 'struct+dominance', 'nodes': 809, 'evals': 144, 't': 0.5121, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'control', 'variant': 'HCA-full', 'nodes': 616, 'evals': 68, 't': 0.4265, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'sensing', 'variant': 'structural-only', 'nodes': 6925, 'evals': 3888, 't': 0.4343, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'sensing', 'variant': 'struct+feasibility', 'nodes': 3242, 'evals': 1578, 't': 0.807, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'sensing', 'variant': 'struct+dominance', 'nodes': 1050, 'evals': 253, 't': 0.4979, 'recall': 1.0, 'exact': True}
+{'scale': 'S2', 'workload': 'sensing', 'variant': 'HCA-full', 'nodes': 639, 'evals': 65, 't': 0.4513, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'telemetry', 'variant': 'structural-only', 'nodes': 61225, 'evals': 34560, 't': 5.6641, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'telemetry', 'variant': 'struct+feasibility', 'nodes': 24659, 'evals': 12709, 't': 6.6801, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'telemetry', 'variant': 'struct+dominance', 'nodes': 4719, 'evals': 427, 't': 3.5745, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'telemetry', 'variant': 'HCA-full', 'nodes': 2436, 'evals': 93, 't': 2.0076, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'control', 'variant': 'structural-only', 'nodes': 61225, 'evals': 34560, 't': 3.3845, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'control', 'variant': 'struct+feasibility', 'nodes': 15985, 'evals': 7031, 't': 6.5471, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'control', 'variant': 'struct+dominance', 'nodes': 4771, 'evals': 448, 't': 3.5889, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'control', 'variant': 'HCA-full', 'nodes': 2413, 'evals': 83, 't': 2.1156, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'sensing', 'variant': 'structural-only', 'nodes': 61225, 'evals': 34560, 't': 3.9888, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'sensing', 'variant': 'struct+feasibility', 'nodes': 23132, 'evals': 10956, 't': 7.7154, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'sensing', 'variant': 'struct+dominance', 'nodes': 4930, 'evals': 540, 't': 3.4547, 'recall': 1.0, 'exact': True}
+{'scale': 'S3', 'workload': 'sensing', 'variant': 'HCA-full', 'nodes': 3304, 'evals': 122, 't': 2.8682, 'recall': 1.0, 'exact': True}
+written results/e4_ablation.csv

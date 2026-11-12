@@ -1,0 +1,51 @@
+services:
+  edge1:
+    image: hcadse-testbed:latest
+    command: ["node"]
+    environment:
+      ROLE: edge
+      MIPS: "15000"
+      NETEM_DELAY: "1.000"
+      NETEM_RATE: "1000"
+    cap_add: ["NET_ADMIN"]
+    cpus: "1.0"
+  edge2:
+    image: hcadse-testbed:latest
+    command: ["node"]
+    environment:
+      ROLE: edge
+      MIPS: "15000"
+      NETEM_DELAY: "1.000"
+      NETEM_RATE: "1000"
+    cap_add: ["NET_ADMIN"]
+    cpus: "1.0"
+  gw1:
+    image: hcadse-testbed:latest
+    command: ["node"]
+    environment:
+      ROLE: gw
+      MIPS: "12000"
+      NETEM_DELAY: "1.000"
+      NETEM_RATE: "1000"
+    cap_add: ["NET_ADMIN"]
+    cpus: "1.0"
+  cloud1:
+    image: hcadse-testbed:latest
+    command: ["node"]
+    environment:
+      ROLE: cloud
+      MIPS: "40000"
+      NETEM_DELAY: "20.000"
+      NETEM_RATE: "200"
+    cap_add: ["NET_ADMIN"]
+    cpus: "1.0"
+  loadgen:
+    image: hcadse-testbed:latest
+    command: ["loadgen"]
+    environment:
+      SPEC: /spec/spec.json
+      OUT: /out/result.json
+    volumes:
+      - ./spec:/spec
+      - ./out:/out
+    depends_on: [edge1, edge2, gw1, cloud1]

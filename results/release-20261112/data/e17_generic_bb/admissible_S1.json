@@ -1,0 +1,38 @@
+[
+  {
+    "scale": "S1",
+    "workload": "telemetry",
+    "prefixes": 1939,
+    "checks": 9720,
+    "min_slack": {
+      "L": -1.3877787807814457e-17,
+      "E": 0.0,
+      "C": 0.0,
+      "D": 0.0
+    }
+  },
+  {
+    "scale": "S1",
+    "workload": "control",
+    "prefixes": 1939,
+    "checks": 9720,
+    "min_slack": {
+      "L": -2.0816681711721685e-17,
+      "E": -5.820766091346741e-11,
+      "C": 0.0,
+      "D": 0.0
+    }
+  },
+  {
+    "scale": "S1",
+    "workload": "sensing",
+    "prefixes": 1939,
+    "checks": 9720,
+    "min_slack": {
+      "L": -5.551115123125783e-16,
+      "E": 0.0,
+      "C": 0.0,
+      "D": -1.4210854715202004e-14
+    }
+  }
+]

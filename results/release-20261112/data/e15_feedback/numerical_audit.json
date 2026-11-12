@@ -1,0 +1,272 @@
+[
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 13,
+    "max_relative_objective_change": 4.7759042819174875e-11,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-10,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 13,
+    "max_relative_objective_change": 5.505836530147657e-13,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-12,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 13,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-14,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 13,
+    "max_relative_objective_change": 3.998401135735002e-10,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-10,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 13,
+    "max_relative_objective_change": 4.114377930303353e-12,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-12,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 13,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-14,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 11,
+    "max_relative_objective_change": 9.196126558740144e-11,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-10,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 11,
+    "max_relative_objective_change": 1.03085903897858e-12,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-12,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 11,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S1",
+    "tolerance": 1e-14,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 22,
+    "max_relative_objective_change": 2.7723902760401825e-10,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-10,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 22,
+    "max_relative_objective_change": 2.2093743302211684e-12,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-12,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 22,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-14,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 20,
+    "max_relative_objective_change": 5.709052583836856e-10,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-10,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 20,
+    "max_relative_objective_change": 5.381520428397374e-12,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-12,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 20,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-14,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 16,
+    "max_relative_objective_change": 1.9645981763781752e-10,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-10,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 16,
+    "max_relative_objective_change": 1.5561796623585472e-12,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-12,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 16,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S2",
+    "tolerance": 1e-14,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 26,
+    "max_relative_objective_change": 7.011834023744651e-10,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-10,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 26,
+    "max_relative_objective_change": 6.938175579980975e-12,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-12,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 26,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-14,
+    "workload": "telemetry"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 22,
+    "max_relative_objective_change": 1.0540797901129327e-09,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-10,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 22,
+    "max_relative_objective_change": 9.905714206110938e-12,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-12,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 22,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-14,
+    "workload": "control"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 27,
+    "max_relative_objective_change": 1.687624706647739e-09,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-10,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 27,
+    "max_relative_objective_change": 1.6404211322651463e-11,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-12,
+    "workload": "sensing"
+  },
+  {
+    "feasibility_changes": 0,
+    "front_membership_changes": 0,
+    "front_size": 27,
+    "max_relative_objective_change": 0.0,
+    "reference_tolerance": 1e-14,
+    "scale": "S3",
+    "tolerance": 1e-14,
+    "workload": "sensing"
+  }
+]

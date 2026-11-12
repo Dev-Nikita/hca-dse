@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.DS_Store
+manuscript/
+figures/
+results/*
+!results/release-20261112/
+*.pdf
+*.docx
+*.zip
+.env
+.env.*

@@ -1,0 +1,322 @@
+[
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.0,
+    "sims": 29,
+    "recall": 0.9615384615384616,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.01,
+    "sims": 1765,
+    "recall": 1.0,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.02,
+    "sims": 1774,
+    "recall": 1.0,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.05,
+    "sims": 1820,
+    "recall": 1.0,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.1,
+    "sims": 1959,
+    "recall": 1.0,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.2,
+    "sims": 3419,
+    "recall": 1.0,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.3,
+    "sims": 4211,
+    "recall": 1.0,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "control",
+    "eps": 0.5,
+    "sims": 6072,
+    "recall": 1.0,
+    "des_front": 26,
+    "feasible": 7112,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.0,
+    "sims": 27,
+    "recall": 0.7142857142857143,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.01,
+    "sims": 937,
+    "recall": 0.8095238095238095,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.02,
+    "sims": 943,
+    "recall": 0.8571428571428571,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.05,
+    "sims": 971,
+    "recall": 0.8571428571428571,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.1,
+    "sims": 1119,
+    "recall": 0.9047619047619048,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.2,
+    "sims": 1572,
+    "recall": 1.0,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.3,
+    "sims": 3598,
+    "recall": 1.0,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "sensing",
+    "eps": 0.5,
+    "sims": 8127,
+    "recall": 1.0,
+    "des_front": 21,
+    "feasible": 8127,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.0,
+    "sims": 16,
+    "recall": 0.7222222222222222,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.01,
+    "sims": 159,
+    "recall": 0.7777777777777778,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.02,
+    "sims": 169,
+    "recall": 0.8333333333333334,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.05,
+    "sims": 179,
+    "recall": 0.8333333333333334,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.1,
+    "sims": 244,
+    "recall": 0.8888888888888888,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.2,
+    "sims": 389,
+    "recall": 1.0,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.3,
+    "sims": 636,
+    "recall": 1.0,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "eps": 0.5,
+    "sims": 910,
+    "recall": 1.0,
+    "des_front": 18,
+    "feasible": 910,
+    "exhaustive_sims": 19440
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.0,
+    "sims": 31,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.01,
+    "sims": 1275,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.02,
+    "sims": 1280,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.05,
+    "sims": 1313,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.1,
+    "sims": 1425,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.2,
+    "sims": 2241,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.3,
+    "sims": 3396,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  },
+  {
+    "scale": "S3",
+    "workload": "telemetry",
+    "eps": 0.5,
+    "sims": 7362,
+    "recall": 1.0,
+    "des_front": 25,
+    "feasible": 9164,
+    "exhaustive_sims": 34560
+  }
+]

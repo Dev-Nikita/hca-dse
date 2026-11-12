@@ -1,0 +1,115 @@
+{
+  "archive_limitation": "Legacy archive contains DES-feasible designs, not the complete structural universe.",
+  "heldout_des_archive": "results/e14_des_endtoend/dumps/S3_telemetry.json.gz",
+  "heldout_des_sha256": "42ceaca26ff16149c1d2dba2cfe3679ed2adccf26c43c90445d0e460e107d324",
+  "rows": [
+    {
+      "des_feasible_archive": 9164,
+      "des_front": 25,
+      "eps": 0.0,
+      "evaluation_reduction": 1114.8387096774193,
+      "hits": 25,
+      "missed": 0,
+      "missed_analytically_infeasible": 0,
+      "missed_gap_max": 0.0,
+      "missed_gap_median": 0.0,
+      "missed_ids": [],
+      "objective_best_relative_regret": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recall": 1.0,
+      "selected": 31,
+      "selected_in_des_feasible_archive": 31
+    },
+    {
+      "des_feasible_archive": 9164,
+      "des_front": 25,
+      "eps": 0.05,
+      "evaluation_reduction": 26.301369863013697,
+      "hits": 25,
+      "missed": 0,
+      "missed_analytically_infeasible": 0,
+      "missed_gap_max": 0.0,
+      "missed_gap_median": 0.0,
+      "missed_ids": [],
+      "objective_best_relative_regret": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recall": 1.0,
+      "selected": 1314,
+      "selected_in_des_feasible_archive": 1313
+    },
+    {
+      "des_feasible_archive": 9164,
+      "des_front": 25,
+      "eps": 0.1,
+      "evaluation_reduction": 24.23562412342216,
+      "hits": 25,
+      "missed": 0,
+      "missed_analytically_infeasible": 0,
+      "missed_gap_max": 0.0,
+      "missed_gap_median": 0.0,
+      "missed_ids": [],
+      "objective_best_relative_regret": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recall": 1.0,
+      "selected": 1426,
+      "selected_in_des_feasible_archive": 1425
+    },
+    {
+      "des_feasible_archive": 9164,
+      "des_front": 25,
+      "eps": 0.2,
+      "evaluation_reduction": 15.407935800267499,
+      "hits": 25,
+      "missed": 0,
+      "missed_analytically_infeasible": 0,
+      "missed_gap_max": 0.0,
+      "missed_gap_median": 0.0,
+      "missed_ids": [],
+      "objective_best_relative_regret": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recall": 1.0,
+      "selected": 2243,
+      "selected_in_des_feasible_archive": 2241
+    },
+    {
+      "des_feasible_archive": 9164,
+      "des_front": 25,
+      "eps": 0.3,
+      "evaluation_reduction": 10.167696381288614,
+      "hits": 25,
+      "missed": 0,
+      "missed_analytically_infeasible": 0,
+      "missed_gap_max": 0.0,
+      "missed_gap_median": 0.0,
+      "missed_ids": [],
+      "objective_best_relative_regret": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "recall": 1.0,
+      "selected": 3399,
+      "selected_in_des_feasible_archive": 3396
+    }
+  ],
+  "schema": "h6-prospective-score-v1",
+  "selection_manifest": "audit/results/h6/manifests/S3_telemetry.json",
+  "selection_manifest_sha256": "4bc7b9d88e204be97a45b2a5bd3de945df51a43bb8d6fd58403b41baa7d9903a"
+}

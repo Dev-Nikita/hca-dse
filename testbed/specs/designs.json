@@ -1,0 +1,3205 @@
+[
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "pareto",
+  "L_analytical": 0.040695833333333334,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.4,
+   "cloud": 0.2
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "pareto",
+  "L_analytical": 0.04034202898550725,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.4,
+   "cloud": 0.08
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "pareto",
+  "L_analytical": 0.03653583333333334,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.4,
+   "cloud": 0.2
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "pareto",
+  "L_analytical": 0.03618202898550725,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.4,
+   "cloud": 0.08
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "pareto",
+  "L_analytical": 0.025895833333333333,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.4,
+   "cloud": 0.2
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "pareto",
+  "L_analytical": 0.025542028985507247,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.4,
+   "cloud": 0.08
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-med",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-med",
+   "rep": 2,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 2,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "dominated",
+  "L_analytical": 0.03213671245421246,
+  "rho": {
+   "edge": 0.5333333333333333,
+   "gw": 0.13333333333333333,
+   "cloud": 0.2
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "edge"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 4,
+   "edge_cls": "edge-med",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-high",
+   "rep": 3,
+   "policy": "edge-first"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080",
+   "edge4:8080"
+  ],
+  "rep": 3,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080",
+     "edge4:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080",
+     "edge4:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "dominated",
+  "L_analytical": 0.024256666666666666,
+  "rho": {
+   "edge": 0.7333333333333333,
+   "gw": 0.4,
+   "cloud": 0.0
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 4,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "edge"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 4,
+   "edge_cls": "edge-med",
+   "n_g": 2,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "edge-first"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080",
+   "edge4:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080",
+     "edge4:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080",
+     "edge4:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "dominated",
+  "L_analytical": 0.011153333333333333,
+  "rho": {
+   "edge": 0.4666666666666667,
+   "gw": 0.2,
+   "cloud": 0.0
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 4,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 4,
+   "edge_cls": "edge-high",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-high",
+   "rep": 2,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080",
+   "edge4:8080"
+  ],
+  "rep": 2,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080",
+     "edge4:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "dominated",
+  "L_analytical": 0.030239107876765245,
+  "rho": {
+   "edge": 0.10666666666666667,
+   "gw": 0.06666666666666667,
+   "cloud": 0.08
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 4,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 2,
+   "gw_cls": "gw-low",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "boundary",
+  "L_analytical": 0.040133695652173916,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.2,
+   "cloud": 0.08
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 8.0,
+    "pay": 0.02
+   },
+   {
+    "w": 4.0,
+    "pay": 0.01
+   },
+   {
+    "w": 20.0,
+    "pay": 0.01
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 2,
+   "gw_cls": "gw-low",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 8.0,
+    "pay_mb": 0.02
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 4.0,
+    "pay_mb": 0.01
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 20.0,
+    "pay_mb": 0.01
+   }
+  ],
+  "lambda_": 400.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.02,
+  "sync_mb": 0.004,
+  "workload": "telemetry",
+  "kind": "boundary",
+  "L_analytical": 0.0404875,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.2,
+   "cloud": 0.2
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "pareto",
+  "L_analytical": 0.029741375985286388,
+  "rho": {
+   "edge": 0.75,
+   "gw": 0.45,
+   "cloud": 0.135
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "pareto",
+  "L_analytical": 0.029591386892177586,
+  "rho": {
+   "edge": 0.75,
+   "gw": 0.45,
+   "cloud": 0.054
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "pareto",
+  "L_analytical": 0.023651446692357095,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.4,
+   "cloud": 0.135
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "pareto",
+  "L_analytical": 0.023501457599248297,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.4,
+   "cloud": 0.054
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "pareto",
+  "L_analytical": 0.022291446692357095,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.4,
+   "cloud": 0.135
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "pareto",
+  "L_analytical": 0.022141457599248297,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.4,
+   "cloud": 0.054
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "edge"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 4,
+   "edge_cls": "edge-med",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-high",
+   "rep": 2,
+   "policy": "edge-first"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080",
+   "edge4:8080"
+  ],
+  "rep": 2,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080",
+     "edge4:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080",
+     "edge4:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "dominated",
+  "L_analytical": 0.012769024024024026,
+  "rho": {
+   "edge": 0.475,
+   "gw": 0.075,
+   "cloud": 0.0
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 4,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-high",
+   "n_g": 2,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "dominated",
+  "L_analytical": 0.023645280623061996,
+  "rho": {
+   "edge": 0.1,
+   "gw": 0.225,
+   "cloud": 0.135
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 4000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 4,
+   "edge_cls": "edge-med",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "dominated",
+  "L_analytical": 0.022141457599248297,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.4,
+   "cloud": 0.054
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 4,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 3,
+   "edge_cls": "edge-high",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-med",
+   "rep": 3,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080"
+  ],
+  "rep": 3,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "dominated",
+  "L_analytical": 0.02804961662699762,
+  "rho": {
+   "edge": 0.2,
+   "gw": 0.15,
+   "cloud": 0.135
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 3,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "edge"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 3,
+   "edge_cls": "edge-med",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "standard",
+   "cloud_cls": "cloud-med",
+   "rep": 3,
+   "policy": "edge-first"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080"
+  ],
+  "rep": 3,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "boundary",
+  "L_analytical": 0.016540135135135133,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.075,
+   "cloud": 0.0
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 2.0,
+   "rate_mbit": 100.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 3,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "edge"
+  ],
+  "stages": [
+   {
+    "w": 5.0,
+    "pay": 0.005
+   },
+   {
+    "w": 3.0,
+    "pay": 0.004
+   },
+   {
+    "w": 9.0,
+    "pay": 0.003
+   }
+  ],
+  "design": {
+   "n_e": 3,
+   "edge_cls": "edge-med",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 3,
+   "policy": "edge-first"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080"
+  ],
+  "rep": 3,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080"
+    ],
+    "work_mi": 5.0,
+    "pay_mb": 0.005
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 3.0,
+    "pay_mb": 0.004
+   },
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080"
+    ],
+    "work_mi": 9.0,
+    "pay_mb": 0.003
+   }
+  ],
+  "lambda_": 600.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 0.005,
+  "sync_mb": 0.002,
+  "workload": "control",
+  "kind": "boundary",
+  "L_analytical": 0.011388135135135136,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.075,
+   "cloud": 0.0
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 3,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "pareto",
+  "L_analytical": 0.08242786885245901,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.75,
+   "cloud": 0.39
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "pareto",
+  "L_analytical": 0.07669028436018957,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.75,
+   "cloud": 0.156
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080",
+   "gw2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "pareto",
+  "L_analytical": 0.06742786885245902,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.375,
+   "cloud": 0.39
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-low",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080",
+   "gw2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "pareto",
+  "L_analytical": 0.06169028436018957,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.375,
+   "cloud": 0.156
+  },
+  "mips": {
+   "edge": 2000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-high",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "pareto",
+  "L_analytical": 0.06696161498248998,
+  "rho": {
+   "edge": 0.24,
+   "gw": 0.15,
+   "cloud": 0.39
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-high",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "pareto",
+  "L_analytical": 0.06122403049022053,
+  "rho": {
+   "edge": 0.24,
+   "gw": 0.15,
+   "cloud": 0.156
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-high",
+   "n_g": 2,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "dominated",
+  "L_analytical": 0.06709215193234577,
+  "rho": {
+   "edge": 0.24,
+   "gw": 0.225,
+   "cloud": 0.156
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 3,
+   "edge_cls": "edge-high",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "dominated",
+  "L_analytical": 0.07430795543254559,
+  "rho": {
+   "edge": 0.16,
+   "gw": 0.45,
+   "cloud": 0.39
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 4000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 3,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-high",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 1,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "dominated",
+  "L_analytical": 0.06110479360627777,
+  "rho": {
+   "edge": 0.24,
+   "gw": 0.075,
+   "cloud": 0.156
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 12000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "gw",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-high",
+   "n_g": 2,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "cloud-first"
+  },
+  "entry": [
+   "gw1:8080",
+   "gw2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080",
+     "gw2:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "dominated",
+  "L_analytical": 0.06742786885245902,
+  "rho": {
+   "edge": 0.0,
+   "gw": 0.375,
+   "cloud": 0.39
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 2
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "cloud"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 3,
+   "edge_cls": "edge-med",
+   "n_g": 1,
+   "gw_cls": "gw-low",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-high",
+   "rep": 2,
+   "policy": "balanced"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080",
+   "edge3:8080"
+  ],
+  "rep": 2,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080",
+     "edge3:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "cloud1:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "boundary",
+  "L_analytical": 0.1216084661783714,
+  "rho": {
+   "edge": 0.8,
+   "gw": 0.45,
+   "cloud": 0.156
+  },
+  "mips": {
+   "edge": 6000.0,
+   "gw": 4000.0,
+   "cloud": 100000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 3,
+  "n_g": 1
+ },
+ {
+  "tiers": [
+   "edge",
+   "gw",
+   "edge"
+  ],
+  "stages": [
+   {
+    "w": 120.0,
+    "pay": 1.2
+   },
+   {
+    "w": 30.0,
+    "pay": 0.35
+   },
+   {
+    "w": 260.0,
+    "pay": 0.3
+   }
+  ],
+  "design": {
+   "n_e": 2,
+   "edge_cls": "edge-high",
+   "n_g": 1,
+   "gw_cls": "gw-high",
+   "link_cls": "fast",
+   "cloud_cls": "cloud-med",
+   "rep": 1,
+   "policy": "edge-first"
+  },
+  "entry": [
+   "edge1:8080",
+   "edge2:8080"
+  ],
+  "rep": 1,
+  "steps": [
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 120.0,
+    "pay_mb": 1.2
+   },
+   {
+    "hosts": [
+     "gw1:8080"
+    ],
+    "work_mi": 30.0,
+    "pay_mb": 0.35
+   },
+   {
+    "hosts": [
+     "edge1:8080",
+     "edge2:8080"
+    ],
+    "work_mi": 260.0,
+    "pay_mb": 0.3
+   }
+  ],
+  "lambda_": 60.0,
+  "n_req": 900,
+  "warmup": 150,
+  "first_pay_mb": 1.2,
+  "sync_mb": 0.1,
+  "workload": "sensing",
+  "kind": "boundary",
+  "L_analytical": 0.08596503267973855,
+  "rho": {
+   "edge": 0.76,
+   "gw": 0.15,
+   "cloud": 0.0
+  },
+  "mips": {
+   "edge": 15000.0,
+   "gw": 12000.0,
+   "cloud": 40000.0
+  },
+  "link": {
+   "delay_ms": 1.0,
+   "rate_mbit": 1000.0
+  },
+  "wan": {
+   "delay_ms": 20.0,
+   "rate_mbit": 200.0
+  },
+  "n_e": 2,
+  "n_g": 1
+ }
+]

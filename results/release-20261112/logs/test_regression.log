@@ -1,0 +1,4 @@
+cached bounds == reference bounds: OK
+S1: P_HCA == P_exhaustive for all workloads and pruning variants
+S2: P_HCA == P_exhaustive for all workloads and pruning variants
+S3: P_HCA == P_exhaustive for all workloads and pruning variants

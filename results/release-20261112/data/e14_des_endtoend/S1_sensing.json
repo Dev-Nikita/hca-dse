@@ -1,0 +1,199 @@
+{
+  "scale": "S1",
+  "workload": "sensing",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_req": 3000,
+  "warmup": 400,
+  "space": 1296,
+  "analytic_wall": 0.010064220999993267,
+  "analytic_evals": 16,
+  "twolevel_wall": 3.8669751090001228,
+  "twolevel_sim_runs": 55,
+  "twolevel_front_size": 8,
+  "inline_wall": 14.534401774999878,
+  "inline_evals": 44,
+  "inline_sim_runs": 220,
+  "inline_front_size": 9,
+  "exh_wall": 304.438893215,
+  "exh_evals": 1080,
+  "exh_sim_runs": 5400,
+  "exh_front_size": 12,
+  "inline_recall": 0.6666666666666666,
+  "inline_front_equal": false,
+  "inline_speedup_wall": 20.946090381143502,
+  "inline_missed": 4,
+  "inline_missed_gap_max": 0.8412698412698413,
+  "inline_missed_gap_median": 0.42063492063492064,
+  "inline_missed_within_1pct": 0,
+  "inline_missed_within_5pct": 0,
+  "inline_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-low",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.073093,
+        445860.0,
+        22.4,
+        111.0
+      ],
+      "gap": 0.0894
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.046165,
+        615420.0,
+        43.2,
+        111.0
+      ],
+      "gap": 0.1429
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 8,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.045848,
+        788220.0,
+        64.2,
+        111.0
+      ],
+      "gap": 0.6984
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 8,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.045641,
+        831420.0,
+        69.6,
+        111.0
+      ],
+      "gap": 0.8413
+    }
+  ],
+  "twolevel_recall": 0.6666666666666666,
+  "twolevel_front_equal": false,
+  "twolevel_speedup_wall": 78.72791642915908,
+  "twolevel_missed": 4,
+  "twolevel_missed_gap_max": 0.23333333333333317,
+  "twolevel_missed_gap_median": 0.23333333333333317,
+  "twolevel_missed_within_1pct": 0,
+  "twolevel_missed_within_5pct": 0,
+  "twolevel_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-med",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "balanced",
+        "rep": 1
+      },
+      "objectives": [
+        0.092603,
+        488628.0,
+        19.0,
+        111.0
+      ],
+      "gap": 0.2333
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-low",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.073093,
+        445860.0,
+        22.4,
+        111.0
+      ],
+      "gap": 0.2333
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.067275,
+        464220.0,
+        24.6,
+        111.0
+      ],
+      "gap": 0.2333
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-low",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.053714,
+        553860.0,
+        35.6,
+        111.0
+      ],
+      "gap": 0.1594
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+ "design": {
+  "cloud_cls": "cloud-med",
+  "edge_cls": "edge-high",
+  "gw_cls": "gw-high",
+  "link_cls": "fast",
+  "n_e": 2,
+  "n_g": 1,
+  "policy": "edge-first",
+  "rep": 1
+ },
+ "errors": 0,
+ "mean": 0.08950947693066665,
+ "n": 750,
+ "p50": 0.057009625,
+ "p95": 0.239518708,
+ "p99": 0.376300208,
+ "wall": 14.803299214
+}

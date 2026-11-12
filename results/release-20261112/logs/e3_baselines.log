@@ -1,0 +1,55 @@
+S2/telemetry random B=100: recall med=0.037 HV med=0.692 IGD+ med=0.1496
+S2/telemetry nsga2 B=100: recall med=0.037 HV med=0.703 IGD+ med=0.1537
+S2/telemetry random B=250: recall med=0.037 HV med=0.794 IGD+ med=0.1018
+S2/telemetry nsga2 B=250: recall med=0.222 HV med=0.886 IGD+ med=0.0431
+S2/telemetry random B=500: recall med=0.074 HV med=0.880 IGD+ med=0.0713
+S2/telemetry nsga2 B=500: recall med=0.741 HV med=0.990 IGD+ med=0.0071
+S2/telemetry random B=1000: recall med=0.185 HV med=0.923 IGD+ med=0.0451
+S2/telemetry nsga2 B=1000: recall med=0.963 HV med=0.999 IGD+ med=0.0002
+S2/telemetry HCA-DSE: n_eval=75 recall=1.0 (exact=True)
+S2/control random B=100: recall med=0.040 HV med=0.691 IGD+ med=0.1460
+S2/control nsga2 B=100: recall med=0.040 HV med=0.627 IGD+ med=0.1592
+S2/control random B=250: recall med=0.040 HV med=0.792 IGD+ med=0.0940
+S2/control nsga2 B=250: recall med=0.360 HV med=0.921 IGD+ med=0.0299
+S2/control random B=500: recall med=0.080 HV med=0.879 IGD+ med=0.0566
+S2/control nsga2 B=500: recall med=0.800 HV med=0.998 IGD+ med=0.0031
+S2/control random B=1000: recall med=0.160 HV med=0.923 IGD+ med=0.0379
+S2/control nsga2 B=1000: recall med=0.860 HV med=0.999 IGD+ med=0.0008
+S2/control HCA-DSE: n_eval=68 recall=1.0 (exact=True)
+S2/sensing random B=100: recall med=0.000 HV med=0.469 IGD+ med=0.2629
+S2/sensing nsga2 B=100: recall med=0.000 HV med=0.404 IGD+ med=0.3482
+S2/sensing random B=250: recall med=0.062 HV med=0.686 IGD+ med=0.1521
+S2/sensing nsga2 B=250: recall med=0.312 HV med=0.780 IGD+ med=0.0809
+S2/sensing random B=500: recall med=0.062 HV med=0.804 IGD+ med=0.0808
+S2/sensing nsga2 B=500: recall med=0.625 HV med=0.941 IGD+ med=0.0224
+S2/sensing random B=1000: recall med=0.188 HV med=0.866 IGD+ med=0.0622
+S2/sensing nsga2 B=1000: recall med=1.000 HV med=1.000 IGD+ med=0.0000
+S2/sensing HCA-DSE: n_eval=65 recall=1.0 (exact=True)
+S3/telemetry random B=100: recall med=0.000 HV med=0.259 IGD+ med=0.3903
+S3/telemetry nsga2 B=100: recall med=0.000 HV med=0.151 IGD+ med=0.4559
+S3/telemetry random B=250: recall med=0.000 HV med=0.487 IGD+ med=0.2574
+S3/telemetry nsga2 B=250: recall med=0.000 HV med=0.676 IGD+ med=0.2017
+S3/telemetry random B=500: recall med=0.000 HV med=0.563 IGD+ med=0.1671
+S3/telemetry nsga2 B=500: recall med=0.210 HV med=0.854 IGD+ med=0.0720
+S3/telemetry random B=1000: recall med=0.016 HV med=0.699 IGD+ med=0.1147
+S3/telemetry nsga2 B=1000: recall med=0.500 HV med=0.986 IGD+ med=0.0422
+S3/telemetry HCA-DSE: n_eval=93 recall=1.0 (exact=True)
+S3/control random B=100: recall med=0.000 HV med=0.262 IGD+ med=0.4192
+S3/control nsga2 B=100: recall med=0.000 HV med=0.286 IGD+ med=0.4405
+S3/control random B=250: recall med=0.000 HV med=0.492 IGD+ med=0.2537
+S3/control nsga2 B=250: recall med=0.037 HV med=0.757 IGD+ med=0.1009
+S3/control random B=500: recall med=0.000 HV med=0.564 IGD+ med=0.1746
+S3/control nsga2 B=500: recall med=0.278 HV med=0.939 IGD+ med=0.0387
+S3/control random B=1000: recall med=0.018 HV med=0.691 IGD+ med=0.1248
+S3/control nsga2 B=1000: recall med=0.685 HV med=0.991 IGD+ med=0.0133
+S3/control HCA-DSE: n_eval=83 recall=1.0 (exact=True)
+S3/sensing random B=100: recall med=0.000 HV med=0.037 IGD+ med=0.6082
+S3/sensing nsga2 B=100: recall med=0.000 HV med=0.050 IGD+ med=0.5191
+S3/sensing random B=250: recall med=0.000 HV med=0.231 IGD+ med=0.3843
+S3/sensing nsga2 B=250: recall med=0.018 HV med=0.320 IGD+ med=0.2833
+S3/sensing random B=500: recall med=0.000 HV med=0.556 IGD+ med=0.2543
+S3/sensing nsga2 B=500: recall med=0.333 HV med=0.757 IGD+ med=0.2040
+S3/sensing random B=1000: recall med=0.000 HV med=0.600 IGD+ med=0.1747
+S3/sensing nsga2 B=1000: recall med=0.741 HV med=0.963 IGD+ med=0.1689
+S3/sensing HCA-DSE: n_eval=122 recall=1.0 (exact=True)
+written results/e3_baselines.csv

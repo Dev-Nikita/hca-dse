@@ -1,0 +1,156 @@
+{
+  "scale": "S3",
+  "workload": "telemetry",
+  "seeds": [
+    0
+  ],
+  "n_req": 3000,
+  "warmup": 400,
+  "space": 51840,
+  "analytic_wall": 0.19081526799982385,
+  "analytic_evals": 52,
+  "twolevel_wall": 2.338969953999822,
+  "twolevel_sim_runs": 31,
+  "twolevel_front_size": 25,
+  "inline_wall": 2.617977143999724,
+  "inline_evals": 41,
+  "inline_sim_runs": 41,
+  "inline_front_size": 19,
+  "exh_wall": 3415.188433225,
+  "exh_evals": 34560,
+  "exh_sim_runs": 34560,
+  "exh_front_size": 25,
+  "inline_recall": 0.76,
+  "inline_front_equal": false,
+  "inline_speedup_wall": 1304.5142281140404,
+  "inline_missed": 6,
+  "inline_missed_gap_max": 0.268292682926829,
+  "inline_missed_gap_median": 0.1760211578019394,
+  "inline_missed_within_1pct": 0,
+  "inline_missed_within_5pct": 0,
+  "inline_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005702,
+        348960.0,
+        30.0,
+        16.0
+      ],
+      "gap": 0.2195
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-med",
+        "gw_cls": "gw-high",
+        "link_cls": "standard",
+        "n_e": 3,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.015137,
+        301632.0,
+        19.6,
+        16.0
+      ],
+      "gap": 0.1139
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 3,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005566,
+        359760.0,
+        31.2,
+        16.0
+      ],
+      "gap": 0.2683
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 3,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005544,
+        402960.0,
+        36.6,
+        16.0
+      ],
+      "gap": 0.2651
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005524,
+        456960.0,
+        43.2,
+        16.0
+      ],
+      "gap": 0.1325
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 6,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.005521,
+        564960.0,
+        56.4,
+        16.0
+      ],
+      "gap": 0.1325
+    }
+  ],
+  "twolevel_recall": 1.0,
+  "twolevel_front_equal": true,
+  "twolevel_speedup_wall": 1460.1249697050448,
+  "twolevel_missed": 0,
+  "twolevel_missed_gap_max": 0.0,
+  "twolevel_missed_gap_median": 0.0,
+  "twolevel_missed_within_1pct": 0,
+  "twolevel_missed_within_5pct": 0,
+  "twolevel_missed_detail": []
+}

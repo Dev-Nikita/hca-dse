@@ -1,0 +1,275 @@
+{
+  "scale": "S2",
+  "workload": "control",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_req": 3000,
+  "warmup": 400,
+  "space": 5832,
+  "analytic_wall": 0.04047427399996195,
+  "analytic_evals": 39,
+  "twolevel_wall": 8.59428666100007,
+  "twolevel_sim_runs": 125,
+  "twolevel_front_size": 22,
+  "inline_wall": 8.908745384999975,
+  "inline_evals": 24,
+  "inline_sim_runs": 120,
+  "inline_front_size": 13,
+  "exh_wall": 1800.293476553,
+  "exh_evals": 3888,
+  "exh_sim_runs": 19440,
+  "exh_front_size": 23,
+  "inline_recall": 0.5652173913043478,
+  "inline_front_equal": false,
+  "inline_speedup_wall": 202.08159496669742,
+  "inline_missed": 10,
+  "inline_missed_gap_max": 1.1102146536068356,
+  "inline_missed_gap_median": 0.2472415795586525,
+  "inline_missed_within_1pct": 0,
+  "inline_missed_within_5pct": 0,
+  "inline_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-high",
+        "edge_cls": "edge-low",
+        "gw_cls": "gw-low",
+        "link_cls": "standard",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "balanced",
+        "rep": 1
+      },
+      "objectives": [
+        0.029882,
+        192873.6,
+        17.6,
+        7.2
+      ],
+      "gap": 0.12
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-med",
+        "gw_cls": "gw-high",
+        "link_cls": "standard",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.010736,
+        234230.4,
+        16.6,
+        7.2
+      ],
+      "gap": 0.1528
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-med",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.006932,
+        232416.0,
+        19.0,
+        7.2
+      ],
+      "gap": 0.131
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 2,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.004324,
+        315936.0,
+        30.0,
+        7.2
+      ],
+      "gap": 0.2195
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-med",
+        "gw_cls": "gw-low",
+        "link_cls": "fast",
+        "n_e": 3,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.006507,
+        242856.0,
+        20.6,
+        7.2
+      ],
+      "gap": 0.2262
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 3,
+        "n_g": 1,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.004302,
+        326736.0,
+        31.2,
+        7.2
+      ],
+      "gap": 0.2683
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 3,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.004285,
+        369936.0,
+        36.6,
+        7.2
+      ],
+      "gap": 0.4878
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-high",
+        "edge_cls": "edge-low",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 4,
+        "policy": "cloud-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.021921,
+        357040.8,
+        43.2,
+        4.8
+      ],
+      "gap": 0.5652
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 2,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.004281,
+        423936.0,
+        43.2,
+        7.2
+      ],
+      "gap": 0.7561
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 4,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.00428,
+        510336.0,
+        54.0,
+        7.2
+      ],
+      "gap": 1.1102
+    }
+  ],
+  "twolevel_recall": 0.9130434782608695,
+  "twolevel_front_equal": false,
+  "twolevel_speedup_wall": 209.47561415684845,
+  "twolevel_missed": 2,
+  "twolevel_missed_gap_max": 0.11999999999999993,
+  "twolevel_missed_gap_median": 0.08127659574468074,
+  "twolevel_missed_within_1pct": 0,
+  "twolevel_missed_within_5pct": 1,
+  "twolevel_missed_detail": [
+    {
+      "design": {
+        "cloud_cls": "cloud-high",
+        "edge_cls": "edge-low",
+        "gw_cls": "gw-low",
+        "link_cls": "standard",
+        "n_e": 2,
+        "n_g": 1,
+        "policy": "balanced",
+        "rep": 1
+      },
+      "objectives": [
+        0.029882,
+        192873.6,
+        17.6,
+        7.2
+      ],
+      "gap": 0.12
+    },
+    {
+      "design": {
+        "cloud_cls": "cloud-med",
+        "edge_cls": "edge-high",
+        "gw_cls": "gw-high",
+        "link_cls": "fast",
+        "n_e": 4,
+        "n_g": 4,
+        "policy": "edge-first",
+        "rep": 1
+      },
+      "objectives": [
+        0.00428,
+        510336.0,
+        54.0,
+        7.2
+      ],
+      "gap": 0.0426
+    }
+  ]
+}
