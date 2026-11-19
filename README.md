@@ -18,26 +18,34 @@ and preserves the analytical Pareto front of the model.
 
 ## Requirements
 
-Python 3.12 with the packages pinned in `requirements-lock.txt` (NumPy 2.5 and SciPy 1.18
-do not install on Python 3.10 or 3.11):
+Python 3.12 (NumPy 2.5 and SciPy 1.18 do not install on Python 3.10 or 3.11).
+`make verify` and `make test` need every pinned package except `z3-solver`:
 
 ```bash
 python3.12 -m venv .venv && . .venv/bin/activate
-pip install -r requirements-lock.txt
+grep -v '^z3-solver' requirements-lock.txt > requirements-verify.txt
+pip install -r requirements-verify.txt
 pip install pytest    # only for `make test`
 ```
 
-The pinned `z3-solver` has no prebuilt wheel for Linux/aarch64 and fails to build there;
-Z3 is used only by the solver experiments (E11, E12, E16 and the encodings of E15), so on that platform install the other
-pins (`grep -v z3-solver requirements-lock.txt > lock.txt`) and a current `z3-solver` if
-those baselines are needed. `make verify` and `make test` need neither.
+Z3 is needed only to re-run the solver experiments (E11, E12, E16 and the solver
+encodings of E15). The full pinned set, including `z3-solver`, installs on macOS/arm64,
+the environment of record:
+
+```bash
+pip install -r requirements-lock.txt
+```
+
+On Linux/aarch64 no `z3-solver` wheel was available in our test (both the pinned and the
+current release tried to build from source and failed), so the solver experiments should
+be re-run on macOS/arm64.
 
 Environments of record: the audit run and the template-A studies were computed with
 Python 3.12.3 on macOS/arm64 with the pinned packages; the template-B study (E19), which
 uses only the standard library, and the sealing of `release-20261113` used Python 3.10.12
 on Linux/aarch64 (the interpreter recorded in `manifest.json`). `make verify` and
-`make test` pass in a clean Python 3.12 environment on Linux/aarch64 with the pinned
-packages.
+`make test` pass in a clean Python 3.12 environment on Linux/aarch64 with every pinned
+package except `z3-solver`.
 
 ## Verify the sealed release
 
@@ -93,13 +101,18 @@ template with a fork-join stage graph and per-stage placement (`hcadse/template_
 in exact rational arithmetic, with an independent reference implementation (`oracle.py`)
 and a mutation analysis (`mutation.py`).
 
-Version 0.2.1 corrects the installation notes (Python 3.12, Z3 on Linux/aarch64) and the
-record of the environments, and refines the wording of one regenerated paragraph; code,
-data and results are unchanged.
+Version 0.2.1: numerical experiment data and search algorithms are unchanged. It corrects
+the installation instructions (Python 3.12, Z3 on Linux/aarch64) and the record of the
+environments, and changes the wording of one generated paragraph (E19); the generator,
+its recorded output digests and the release manifest are updated accordingly.
 
 The accompanying manuscript has not yet been peer-reviewed. The verification procedure
 regenerates the reported computational results from the retained data; the physical
 measurements are included as recorded observations and are not re-executed.
 
-No open-source licence has been granted at this time; all rights are reserved by the
-author.
+## Licence
+
+Copyright 2026 Nikita Tarasov. Licensed under the Apache License, Version 2.0 (see
+`LICENSE` and `NOTICE`) from version 0.2.1 on. Versions 0.1 and 0.2 were archived at
+Zenodo under CC BY 4.0. If you use this code, please cite the Zenodo record of the version
+you used.
