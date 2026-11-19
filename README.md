@@ -18,13 +18,26 @@ and preserves the analytical Pareto front of the model.
 
 ## Requirements
 
-Python 3.10 with the packages pinned in `requirements-lock.txt`:
+Python 3.12 with the packages pinned in `requirements-lock.txt` (NumPy 2.5 and SciPy 1.18
+do not install on Python 3.10 or 3.11):
 
 ```bash
-python3 -m venv .venv && . .venv/bin/activate
+python3.12 -m venv .venv && . .venv/bin/activate
 pip install -r requirements-lock.txt
 pip install pytest    # only for `make test`
 ```
+
+The pinned `z3-solver` has no prebuilt wheel for Linux/aarch64 and fails to build there;
+Z3 is used only by the solver experiments (E11, E12, E16 and the encodings of E15), so on that platform install the other
+pins (`grep -v z3-solver requirements-lock.txt > lock.txt`) and a current `z3-solver` if
+those baselines are needed. `make verify` and `make test` need neither.
+
+Environments of record: the audit run and the template-A studies were computed with
+Python 3.12.3 on macOS/arm64 with the pinned packages; the template-B study (E19), which
+uses only the standard library, and the sealing of `release-20261113` used Python 3.10.12
+on Linux/aarch64 (the interpreter recorded in `manifest.json`). `make verify` and
+`make test` pass in a clean Python 3.12 environment on Linux/aarch64 with the pinned
+packages.
 
 ## Verify the sealed release
 
@@ -50,8 +63,11 @@ make test
 
 `make reproduce` re-executes the computational experiments into a new release
 directory. Wall-clock timings and the containerised measurements are physical
-observations: a re-run reproduces counts, fronts and derived quantities, not the
-timings bit for bit. The decision-regret study (E18) needs no simulation:
+observations: a re-run reproduces fronts and derived quantities, not the timings bit
+for bit. Evaluation counts of the template-A search can differ slightly across Python
+versions: under Python 3.10 and 3.11 the fronts and counts are identical for the control
+and sensing workloads and two to five full evaluations higher for telemetry, because
+compensated summation in 3.12 changes some bounds in the last binary digit. The decision-regret study (E18) needs no simulation:
 
 ```bash
 python3 experiments/e18_decision_regret/e18_decision_regret.py \
@@ -67,7 +83,8 @@ Each tagged version is archived at Zenodo with its own DOI; the Zenodo record li
 versions. Version 0.1 (12 November 2026): DOI
 [10.5281/zenodo.24171466](https://doi.org/10.5281/zenodo.24171466).
 
-Version 0.2 (November 2026) tightens the transfer-energy term of the bounds, which is now
+Version 0.2 (19 November 2026, DOI
+[10.5281/zenodo.24378698](https://doi.org/10.5281/zenodo.24378698)) tightens the transfer-energy term of the bounds, which is now
 exact once policy, replication and link class are assigned, adds a check that the bounds
 dominate the assignment-monotone partial cost on every prefix of S1 and S2, and re-seals
 all bound-dependent results as `release-20261113`. It also adds a second architecture
@@ -75,6 +92,10 @@ template with a fork-join stage graph and per-stage placement (`hcadse/template_
 `experiments/e19_template_b/`), whose pruning, feasibility, archive and front are decided
 in exact rational arithmetic, with an independent reference implementation (`oracle.py`)
 and a mutation analysis (`mutation.py`).
+
+Version 0.2.1 corrects the installation notes (Python 3.12, Z3 on Linux/aarch64) and the
+record of the environments, and refines the wording of one regenerated paragraph; code,
+data and results are unchanged.
 
 The accompanying manuscript has not yet been peer-reviewed. The verification procedure
 regenerates the reported computational results from the retained data; the physical

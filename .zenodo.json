@@ -1,0 +1,12 @@
+{
+  "title": "HCA-DSE: research code and sealed results",
+  "upload_type": "software",
+  "description": "Research code, tests and sealed result package for HCA-DSE, an exact design-space exploration method for heterogeneous edge-cloud cyber-physical architectures. The sealed release can be verified with make verify.",
+  "creators": [
+    {
+      "name": "Tarasov, Nikita",
+      "affiliation": "Lviv Polytechnic National University",
+      "orcid": "0000-0003-1870-3436"
+    }
+  ]
+}

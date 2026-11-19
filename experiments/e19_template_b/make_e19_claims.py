@@ -109,6 +109,7 @@ macros = {
     "TbChecks": thin(sum(c["checks"] for c in check)),
     "TbBreakEven": ("" if always else ran((b for b in breakeven if b > 0), 0)),
     "TbOracleFull": thin(sum(r["compared"] for r in full)),
+    "TbOracleDesigns": thin(sum({r["scale"]: r["compared"] for r in full}.values())),
     "TbOracleFullScales": " and ".join(sorted({r["scale"] for r in full})),
     "TbOracleSample": thin(sample[0]["compared"]) if sample else "0",
     "TbOracleSampleScale": " and ".join(sorted({r["scale"] for r in sample})),
@@ -191,8 +192,9 @@ prose = (
     r"exhaustive front, which is itself computed in rational arithmetic. A separate "
     r"reference implementation, written from the specification and sharing only the "
     r"parameter values with the production code, agrees with the production evaluator on "
-    r"feasibility and on all four objectives, exactly, for all \TbOracleFull{} designs of "
-    r"\TbOracleFullScales{} and for a random sample of \TbOracleSample{} designs per "
+    r"feasibility and on all four objectives, exactly, for all \TbOracleDesigns{} designs of "
+    r"\TbOracleFullScales{} under each of the three workloads (\TbOracleFull{} "
+    r"design--workload evaluations) and for a random sample of \TbOracleSample{} designs per "
     r"workload of \TbOracleSampleScale{}, and it reproduces the front of every "
     r"combination, also under \TbOrders{} other variable orders. A mutation analysis of "
     r"\TbMutants{} single changes to the bounds and to the pruning decisions kills all "
