@@ -1,0 +1,26 @@
+[
+ {
+  "scale": "B1",
+  "workload": "vision",
+  "prefixes": 5322,
+  "checks": 22264,
+  "admissibility_violations": 0,
+  "ordering_violations": 0
+ },
+ {
+  "scale": "B1",
+  "workload": "fusion",
+  "prefixes": 5322,
+  "checks": 21648,
+  "admissibility_violations": 0,
+  "ordering_violations": 0
+ },
+ {
+  "scale": "B1",
+  "workload": "batch",
+  "prefixes": 5322,
+  "checks": 25168,
+  "admissibility_violations": 0,
+  "ordering_violations": 0
+ }
+]

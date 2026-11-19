@@ -14,14 +14,15 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parent
 EXPECTED = HERE / "expected_outputs.json"
 GENERATORS = ("e14_des_endtoend/make_e14_claims.py", "e15_feedback/make_e15_claims.py",
-              "e17_generic_bb/make_e17_claims.py", "e18_decision_regret/make_e18_claims.py")
+              "e17_generic_bb/make_e17_claims.py", "e18_decision_regret/make_e18_claims.py",
+              "e19_template_b/make_e19_claims.py")
 
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 
 
-release = Path(os.environ.get("HCADSE_RESULTS", "results/release-20261112/data")).resolve().parent
+release = Path(os.environ.get("HCADSE_RESULTS", "results/release-20261113/data")).resolve().parent
 manifest = json.loads((release / "manifest.json").read_text())
 for name, digest in manifest["data_sha256"].items():
     assert sha(release / "data" / name) == digest, "sealed data changed: " + name

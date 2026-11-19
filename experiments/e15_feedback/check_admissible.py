@@ -5,6 +5,14 @@ term-wise bound of hcadse.feedback.lower_bounds must not exceed the objective
 vector the retry evaluator returns for the completion.  Infeasible completions
 are included: a bound must underestimate every completion, feasible or not,
 because pruning happens before feasibility is known.
+
+Proposition 4 is stated for the exact least fixed point.  The evaluator stops its
+iteration at a relative residual of 1e-12 and the bound iterates its own map in
+interval arithmetic.  A residual of 1e-12 bounds the error of the returned rate
+only up to the factor 1/(1-k) of the local contraction k, so the two can differ by
+a small multiple of the tolerance; a violation is reported beyond FP_REL = 100 times
+the fixed-point tolerance relative to the objective, and the largest relative
+excess of a bound over the evaluator output is recorded.
 """
 import argparse, itertools, json, sys, time
 from pathlib import Path
@@ -16,6 +24,7 @@ from hcadse.model import VAR_ORDER, WORKLOADS, make_space
 from hcadse.search import structurally_valid
 
 INF = float("inf")
+FP_REL = 100 * feedback.FP_RTOL
 KEYS = ("L", "E", "C", "D")
 IDX = {"L": 0, "E": 1, "C": 2, "D": 3}
 
@@ -41,6 +50,7 @@ def main():
         t0 = time.perf_counter()
         prefixes = checks = 0
         worst = {k: INF for k in KEYS}      # smallest slack f_i - LB_i
+        excess = 0.0                         # largest (LB_i - f_i) / f_i
         for depth in range(0, min(a.depth_max, len(VAR_ORDER)) + 1):
             head, rest = VAR_ORDER[:depth], list(VAR_ORDER[depth:])
             for combo in itertools.product(*[space.domain(v) for v in head]):
@@ -70,12 +80,15 @@ def main():
                         if v == INF:
                             continue
                         slack = v - lb[k]
-                        assert slack >= -1e-9, ("bound violated", k, wname, partial, x,
+                        assert slack >= -(FP_REL * abs(v) + 1e-9), ("bound violated", k, wname, partial, x,
                                                 lb[k], v)
                         worst[k] = min(worst[k], slack)
+                        if v > 0:
+                            excess = max(excess, -slack / v)
         row = dict(scale=a.scale, workload=wname, prefixes=prefixes, checks=checks,
                    seconds=round(time.perf_counter() - t0, 2),
-                   min_slack={k: (None if worst[k] == INF else worst[k]) for k in KEYS})
+                   min_slack={k: (None if worst[k] == INF else worst[k]) for k in KEYS},
+                   max_relative_excess=excess)
         rows.append(row)
         print(json.dumps(row), flush=True)
     if a.out:

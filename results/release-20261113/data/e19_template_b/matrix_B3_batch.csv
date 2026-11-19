@@ -1,0 +1,5 @@
+scale,workload,config,raw,evals,nodes,bound_calls,certifications,seconds,eval_seconds,overhead_seconds,front,exact,float_front_equal
+B3,batch,G0,82944,46656,46656,0,0,21.7448,0.6977,21.0471,196,True,True
+B3,batch,G1,82944,267,13721,33279,19563,10.601,0.006,10.595,196,True,
+B3,batch,G2m,82944,1368,5817,10186,4370,5.3407,0.0308,5.3098,196,True,
+B3,batch,G2,82944,267,3988,8138,4152,3.3923,0.008,3.3842,196,True,

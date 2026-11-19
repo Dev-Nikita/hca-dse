@@ -208,7 +208,7 @@ def lower_bounds(partial: dict, space, wl) -> Dict[str, float]:
     point of the map built from L_lb is then at or below the least fixed point of
     every completion, and every load-dependent term is evaluated at it.
     """
-    from .bounds import _comm_latency_lb, _net_MB_lb
+    from .bounds import _comm_latency_lb, _net_MB_lb, _transfer_E_lb
     st = wl.stages
     tau = SOFT * wl.deadline
     edge_d = _dom(space, partial, "edge_cls"); gw_d = _dom(space, partial, "gw_cls")
@@ -252,7 +252,7 @@ def lower_bounds(partial: dict, space, wl) -> Dict[str, float]:
         mult = min(rep_d) if i == 0 else 1
         E += lam_eff * s.w * mult * min(dyn[t] for t in opts) * T
     net_lb = min(_net_MB_lb(p, rep_d, wl) for p in pol_d)
-    E += net_lb * lam_eff * min(e_min, WAN_E) * T
+    E += min(_transfer_E_lb(p, rep_d, wl, e_min) for p in pol_d) * lam_eff * T
 
     C_exact = deployment_cost_decimal(
         min(ne_d), min(c.cost for c in edge_d), min(ng_d),

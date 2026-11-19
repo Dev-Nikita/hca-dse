@@ -1,0 +1,44 @@
+[
+  {
+    "scale": "S2",
+    "workload": "telemetry",
+    "prefixes": 6925,
+    "checks": 34992,
+    "seconds": 27.58,
+    "min_slack": {
+      "L": -3.410605131648481e-13,
+      "E": -7.061753422021866e-07,
+      "C": 0.0,
+      "D": -5.2860826826872653e-11
+    },
+    "max_relative_excess": 6.052693751832612e-12
+  },
+  {
+    "scale": "S2",
+    "workload": "control",
+    "prefixes": 6925,
+    "checks": 34992,
+    "seconds": 28.78,
+    "min_slack": {
+      "L": -6.577446920452701e-13,
+      "E": -1.2709642760455608e-06,
+      "C": 0.0,
+      "D": -6.111910977324442e-11
+    },
+    "max_relative_excess": 1.966642618015623e-11
+  },
+  {
+    "scale": "S2",
+    "workload": "sensing",
+    "prefixes": 6925,
+    "checks": 34992,
+    "seconds": 22.01,
+    "min_slack": {
+      "L": -3.0091484859440243e-12,
+      "E": -7.585622370243073e-07,
+      "C": 0.0,
+      "D": -2.2663471099804156e-10
+    },
+    "max_relative_excess": 3.527390829356502e-12
+  }
+]

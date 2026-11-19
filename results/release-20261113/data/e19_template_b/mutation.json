@@ -1,0 +1,139 @@
+{
+ "scale": "B1",
+ "workloads": 3,
+ "boundary_workloads": 32,
+ "admissibility_samples": 300,
+ "mutants": [
+  {
+   "mutant": "latency bound inflated by 2%",
+   "front_failures": 30,
+   "front_failures_beyond_rounding": 30,
+   "failing": [
+    "vision",
+    "fusion",
+    "batch",
+    "vision/L>=front",
+    "vision/L<front",
+    "vision/E>=front"
+   ],
+   "admissibility_violations": 63,
+   "unit_failures": [],
+   "killed_by_front": true,
+   "killed": true
+  },
+  {
+   "mutant": "utilisation in the waiting term inflated by 50%",
+   "front_failures": 32,
+   "front_failures_beyond_rounding": 32,
+   "failing": [
+    "vision",
+    "fusion",
+    "batch",
+    "vision/L>=front",
+    "vision/L<front",
+    "vision/E>=front"
+   ],
+   "admissibility_violations": 64,
+   "unit_failures": [],
+   "killed_by_front": true,
+   "killed": true
+  },
+  {
+   "mutant": "unassigned stage bounded with the slowest class",
+   "front_failures": 24,
+   "front_failures_beyond_rounding": 24,
+   "failing": [
+    "vision",
+    "batch",
+    "vision/L>=front",
+    "vision/L<front",
+    "vision/L<front1",
+    "vision/L<front2"
+   ],
+   "admissibility_violations": 59,
+   "unit_failures": [],
+   "killed_by_front": true,
+   "killed": true
+  },
+  {
+   "mutant": "unassigned link: access energy of the most expensive link",
+   "front_failures": 5,
+   "front_failures_beyond_rounding": 5,
+   "failing": [
+    "vision/E>=front",
+    "vision/E<front",
+    "fusion/E>=front",
+    "batch/E>=front",
+    "batch/E<front"
+   ],
+   "admissibility_violations": 107,
+   "unit_failures": [],
+   "killed_by_front": true,
+   "killed": true
+  },
+  {
+   "mutant": "binary64 proposal taken without exact confirmation",
+   "front_failures": 15,
+   "front_failures_beyond_rounding": 15,
+   "failing": [
+    "vision",
+    "vision/L>=front",
+    "vision/L<front",
+    "vision/E>=front",
+    "vision/E<front",
+    "vision/L<front1"
+   ],
+   "admissibility_violations": 0,
+   "unit_failures": [
+    "a bound equal to every limit is pruned as infeasible",
+    "a bound equal to an archived vector is pruned as dominated"
+   ],
+   "killed_by_front": true,
+   "killed": true
+  },
+  {
+   "mutant": "infeasibility pruning with a non-strict comparison",
+   "front_failures": 0,
+   "front_failures_beyond_rounding": 0,
+   "failing": [],
+   "admissibility_violations": 0,
+   "unit_failures": [
+    "a bound equal to every limit is pruned as infeasible"
+   ],
+   "killed_by_front": false,
+   "killed": true
+  },
+  {
+   "mutant": "dominance pruning with a non-strict comparison",
+   "front_failures": 0,
+   "front_failures_beyond_rounding": 0,
+   "failing": [],
+   "admissibility_violations": 0,
+   "unit_failures": [
+    "a bound equal to an archived vector is pruned as dominated"
+   ],
+   "killed_by_front": false,
+   "killed": true
+  },
+  {
+   "mutant": "leaf feasibility and archive in binary64",
+   "front_failures": 32,
+   "front_failures_beyond_rounding": 11,
+   "failing": [
+    "vision",
+    "vision/L>=front",
+    "vision/L<front",
+    "vision/E>=front",
+    "vision/E<front",
+    "vision/L<front1"
+   ],
+   "admissibility_violations": 0,
+   "unit_failures": [],
+   "killed_by_front": true,
+   "killed": true
+  }
+ ],
+ "killed": 8,
+ "killed_by_front": 6,
+ "total": 8
+}

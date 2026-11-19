@@ -110,6 +110,18 @@ def _net(policy, replication, workload):
     return value
 
 
+def _transfer(policy, replication, workload, e_access):
+    """Transfer energy per unit rate and time, access and WAN hops priced apart."""
+    t1, t3 = POLICIES[policy]
+    sizes = [Interval.point(stage.s_in) for stage in workload.stages]
+    access = sizes[0]
+    if t1 == "edge":
+        access += sizes[1] + Interval.point(replication-1) * workload.s_sync
+    if t3 == "cloud":
+        return access * e_access + sizes[2] * WAN_E
+    return (access + sizes[2]) * e_access
+
+
 def _communication(policy, replication, workload, bandwidth, propagation):
     t1, t3 = POLICIES[policy]
     sizes = [Interval.point(stage.s_in) for stage in workload.stages]
@@ -228,7 +240,9 @@ def certified_lower_bounds(partial, space, workload):
         multiplier = min(rep) if index == 0 else 1
         energy += arrival * stage.w * multiplier * imin(dynamic[t] for t in options) * horizon
     network = imin(_net(policy, min(rep), workload) for policy in policies)
-    energy += network * arrival * min(min(link.e for link in links), WAN_E) * horizon
+    e_access = min(link.e for link in links)
+    energy += imin(_transfer(policy, min(rep), workload, e_access)
+                   for policy in policies) * arrival * horizon
 
     from .numeric import deployment_cost_decimal
     cost = deployment_cost_decimal(min(ne), min(c.cost for c in edge), min(ng),
@@ -335,7 +349,9 @@ def certified_feedback_lower_bounds(partial, space, workload, soft="0.5", iterat
         multiplier = min(rep) if index == 0 else 1
         energy += arrival*stage.w*multiplier*imin(dynamic[t] for t in options)*horizon
     network = imin(_net(policy, min(rep), workload) for policy in policies)
-    energy += network*arrival*min(min(link.e for link in links), WAN_E)*horizon
+    e_access = min(link.e for link in links)
+    energy += imin(_transfer(policy, min(rep), workload, e_access)
+                   for policy in policies)*arrival*horizon
     from .numeric import deployment_cost_decimal
     cost = deployment_cost_decimal(min(ne), min(c.cost for c in edge), min(ng),
                                    min(c.cost for c in gateway),

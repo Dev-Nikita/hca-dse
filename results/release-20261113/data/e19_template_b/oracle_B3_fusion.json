@@ -1,0 +1,10 @@
+[
+ {
+  "scale": "B3",
+  "workload": "fusion",
+  "feasible": 38806,
+  "front": 174,
+  "stored_front_equal": true,
+  "search_front_equal": true
+ }
+]

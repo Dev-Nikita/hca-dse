@@ -11,7 +11,11 @@ G.mkdir(parents=True, exist_ok=True)
 rows = list(csv.DictReader((R / "bb_matrix.csv").open()))
 adm = json.load((R / "admissible_S1.json").open())
 cross = list(csv.DictReader((R / "crossover.csv").open()))
-des_path = next((q for q in (ROOT / "results").glob("*/data/e2_des_timing.json")), None)
+import os
+_env = os.environ.get("HCADSE_RESULTS")
+_cands = ([Path(_env) / "e2_des_timing.json"] if _env else
+          sorted((ROOT / "results").glob("release-*/data/e2_des_timing.json")))
+des_path = _cands[-1] if _cands and _cands[-1].exists() else None
 des_cost = json.load(des_path.open())["mean_seconds"] if des_path else None
 crossed = [r for r in cross if r["crossover_vs_generic_s"]]
 s3cross = [r for r in crossed if r["scale"] == "S3"]
@@ -35,12 +39,17 @@ def thin(n):
 
 
 delta = [int(c["G1c"]["evals"]) - int(c["G2"]["evals"]) for c in cells]
+assert all(d >= 0 for d in delta), "the proposed bound spent more evaluations than G1c"
+assert not crossed, "a crossover against the generic bound exists; the prose assumes none"
+assert all(float(c["G2"]["overhead_seconds"]) < float(c["G1c"]["overhead_seconds"])
+           for c in cells), "the proposed bound has the higher overhead somewhere"
+fewer = [d for d in delta if d > 0]
+positive_same = all(c["G3"]["evals"] == c["G2"]["evals"] for c in cells)
 macros = {
     "BBRuns": str(len(cells)),
     "BBRepeats": "3",
-    "BBGenericFewer": ran((-d for d in delta), 0),
     "BBGenericEqual": str(sum(1 for d in delta if d == 0)),
-    "BBGenericWorse": str(sum(1 for d in delta if d > 0)),
+    "BBOursFewerCount": str(len(fewer)),
     "BBEvalRange": ran((int(c["G2"]["evals"]) for c in cells), 0),
     "BBGenericEvalRange": ran((int(c["G1c"]["evals"]) for c in cells), 0),
     "BBStateFactor": ran((int(c["G1c"]["nodes"]) / int(c["G2"]["nodes"]) for c in cells), 1),
@@ -52,15 +61,13 @@ macros = {
     "BBPositiveStateCut": ran((100 * (1 - int(c["G3"]["nodes"]) / int(c["G2"]["nodes"]))
                                for c in cells), 0),
     "BBLateStateFactor": ran((int(c["G4"]["nodes"]) / int(c["G3"]["nodes"]) for c in cells), 1),
-    "BBCrossNone": str(len(cross) - len(crossed)),
     "BBWindowLow": ran((float(r["crossover_vs_exhaustive_us"]) for r in cross
                         if r["crossover_vs_exhaustive_us"]), 0),
     "BBWindowLowLarge": ran((float(r["crossover_vs_exhaustive_us"]) for r in cross
                              if r["scale"] == "S3" and r["crossover_vs_exhaustive_us"]), 0),
+    "BBWindowLowMid": ran((float(r["crossover_vs_exhaustive_us"]) for r in cross
+                           if r["scale"] in ("S2", "S3") and r["crossover_vs_exhaustive_us"]), 0),
     "BBDesCost": "%.1f" % (des_cost * 1000) if des_cost else "",
-    "BBExtraCalls": ran((int(r["extra_evals"]) for r in crossed), 0),
-    "BBCrossRange": ran((float(r["crossover_vs_generic_s"]) for r in crossed), 2),
-    "BBCrossRangeLarge": ran((float(r["crossover_vs_generic_s"]) for r in s3cross), 2),
     "BBAdmPrefix": thin(adm[0]["prefixes"]),
     "BBAdmChecks": thin(sum(a["checks"] for a in adm)),
 }
@@ -102,56 +109,46 @@ prose = (
     r"comparable with Section~\ref{sec:results}. Every configuration returns the "
     r"exhaustive front."
     "\n\n"
-    r"The first result is negative. On full evaluations the "
-    r"generic bound is \emph{not} worse: it spends \BBGenericEvalRange{} calls against "
-    r"\BBEvalRange{} for the proposed bound, equal in \BBGenericEqual{} of the "
-    r"\BBRuns{} combinations and \BBGenericFewer{} calls fewer in the rest. Both bounds "
-    r"compute the contention term exactly once its determinants are assigned, and that "
-    r"term, not the relaxation style around it, is what saves evaluator calls: relaxing it "
-    r"to zero while keeping every other relaxation costs $\BBZeroedFactor\times$ more full "
-    r"evaluations. We therefore do not claim an evaluator-call advantage over a generic "
-    r"branch-and-bound, and the within-run counterfactual of \RefOrderTab{}, which holds "
-    r"the archive fixed, understates the term for the same reason."
+    r"On full evaluations the proposed bound is never worse: it spends \BBEvalRange{} "
+    r"calls against \BBGenericEvalRange{} for the generic bound, equal in "
+    r"\BBGenericEqual{} of the \BBRuns{} combinations"
+    + (r" and fewer in the remaining \BBOursFewerCount{}" if fewer else "")
+    + r", as Proposition~\ref{prop:mono} predicts from the componentwise ordering of the two "
+    r"bounds. The evaluator calls that both avoid are due mainly to the contention term, "
+    r"which both compute exactly once its determinants are assigned: relaxing it to zero "
+    r"while keeping every other relaxation costs $\BBZeroedFactor\times$ more full "
+    r"evaluations. We therefore do not claim a large evaluator-call advantage over a "
+    r"generic branch-and-bound with the same traversal, and the within-run "
+    r"counterfactual of \RefOrderTab{}, which holds the archive fixed, understates the term "
+    r"for the same reason."
     "\n\n"
-    r"What the term-wise relaxation does provide is search-side economy. The proposed bound "
+    r"What the term-wise relaxation adds is search-side economy. The proposed bound "
     r"expands $\BBStateFactor\times$ fewer partial designs than the generic bound, "
     r"$\BBStateFactorLarge\times$ on the largest scale, and completes "
-    r"$\BBTimeFactor\times$ faster under the identical protocol, both ratios growing with "
-    r"the scale. That economy is in the search, not in the evaluator, and the cost model "
-    r"of Section~\ref{sec:complexity} says when it is worth having."
+    r"$\BBTimeFactor\times$ faster under the identical protocol."
     "\n\n"
     r"Charging both configurations the same price per full evaluation, "
     r"$T(C_E)=\textit{overhead}+N\,C_E$, with the overhead taken as wall-clock minus the "
-    r"time spent inside the evaluator, locates the cost at which one overtakes the other. "
-    r"In \BBCrossNone{} of the \BBRuns{} combinations the two spend the same number of "
-    r"evaluations, so the lower overhead wins at every evaluator cost. In the remaining "
-    r"ones the proposed bound pays \BBExtraCalls{} extra evaluations for its lower "
-    r"overhead, and the generic bound becomes the cheaper of the two once one full "
-    r"evaluation costs more than \BBCrossRange{}\,s (\BBCrossRangeLarge{}\,s on S3). "
-    r"These are thresholds computed from the measured overheads and evaluation counts, not "
-    r"observed switch-overs: we did not run the search with an evaluator priced at a "
-    r"second a call."
-    "\n\n"
-    r"Read together with the comparison against exhaustive enumeration, which the same "
-    r"model places at \BBWindowLow{}\,$\mu$s per evaluation "
-    r"(\BBWindowLowLarge{}\,$\mu$s on S3), this delimits the regime of the method. "
-    r" Below the lower figure enumeration is cheaper, because the bounds cost more "
-    r"than the evaluations they avoid. Above the upper figure a generic partial-cost bound "
-    r"with the same traversal order is cheaper, because its one to five fewer evaluations "
-    r"outweigh its larger search. Between them the proposed bound is the cheapest of the "
-    r"three, and that interval spans roughly four orders of magnitude. The discrete-event "
+    r"time spent inside the evaluator, the proposed bound is the cheaper of the two at "
+    r"every evaluator cost in all \BBRuns{} combinations, because it never spends more "
+    r"evaluations and always has the lower overhead; there is no crossover. Against "
+    r"exhaustive enumeration the same model places the break-even at \BBWindowLow{}\,$\mu$s "
+    r"per evaluation (\BBWindowLowLarge{}\,$\mu$s on S3): below it enumeration is "
+    r"cheaper, because the bounds cost more than the evaluations they avoid, and above it "
+    r"the proposed bound has the lowest total cost of the three. These thresholds come "
+    r"from the runs of this comparison on S1--S3; the break-even of "
+    r"Section~\ref{sec:rq3} comes from the timing runs of the main experiment on S2--S3, "
+    r"and on those two scales the two estimates, \BBWindowLowMid{} and "
+    r"$55.7\text{--}115.4\,\mu$s, overlap. The discrete-event "
     r"simulator of Section~\ref{sec:methodology}, measured at \BBDesCost{}\,ms per "
-    r"evaluation, sits inside it --- well above the enumeration threshold and below every "
-    r"generic threshold measured --- so for that evaluator the proposed bound has the "
-    r"lowest total cost of the three. An industrial evaluator of the kind "
-    r"the introduction cites sits at or above the upper edge: at a second a design point the "
-    r"choice still depends on the workload, because the thresholds reach "
-    r"\BBCrossRangeLarge{}\,s on S3, and by a minute a design point the generic bound is "
-    r"cheaper everywhere we measured. In that range the remaining advantage of the method is the exactness of "
-    r"Section~\ref{sec:method} under its stated numerical policy, not speed. "
-    r"\RefMethodTab{} states the resulting choice rule."
+    r"evaluation, lies far above that threshold. For an industrial evaluator at seconds "
+    r"or minutes per design point the advantage over the generic bound shrinks in relative "
+    r"terms, because evaluation time dominates and both spend the same number of "
+    r"evaluations, but it does not reverse. These are costs computed from the measured "
+    r"overheads and evaluation counts; we did not run the search with an evaluator priced "
+    r"at a second a call. \RefMethodTab{} states the resulting choice rule."
     "\n\n"
-    r"A strengthening of our own bound does not pay either. The zero of "
+    r"A strengthening of the proposed bound does not pay. The zero of "
     r"Section~\ref{sec:method} can be replaced by a positive quantity: the waiting term is "
     r"non-decreasing in the service time and in the utilisation, so substituting the "
     r"smallest reachable load, the largest reachable capacity and the minimum over the "

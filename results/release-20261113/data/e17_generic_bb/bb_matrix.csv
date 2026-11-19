@@ -1,0 +1,64 @@
+scale,workload,config,label,evals,nodes,bound_calls,seconds,best_seconds,eval_seconds,overhead_seconds,peak_kib,front,exact
+S1,telemetry,G0,exhaustive oracle,1080,1080,0,0.0143,0.0133,0.00694,0.00732,182,17,True
+S1,telemetry,G1,"generic B&B, partial-cost bound",43,511,1736,0.8269,0.766,0.00071,0.82621,65,17,True
+S1,telemetry,G1c,"generic B&B, same two-stage protocol and caching",43,511,1749,0.3815,0.3499,0.00058,0.38088,913,17,True
+S1,telemetry,G2m,"HCA-DSE, contention term zeroed",133,441,1040,0.2019,0.1804,0.00125,0.20063,84,17,True
+S1,telemetry,G2,HCA-DSE as published,43,257,777,0.1709,0.1615,0.00048,0.17043,74,17,True
+S1,telemetry,G3,HCA-DSE + positive waiting bound,43,255,781,0.2872,0.2859,0.00054,0.28662,80,17,True
+S1,telemetry,G4,G3 under the determinants-late order,41,587,1971,0.803,0.7755,0.00053,0.80249,83,17,True
+S1,control,G0,exhaustive oracle,1080,1080,0,0.0137,0.0126,0.00741,0.00628,191,18,True
+S1,control,G1,"generic B&B, partial-cost bound",123,561,1585,0.6768,0.6611,0.00149,0.67526,155,18,True
+S1,control,G1c,"generic B&B, same two-stage protocol and caching",44,447,1568,0.3618,0.2986,0.00064,0.36113,838,18,True
+S1,control,G2m,"HCA-DSE, contention term zeroed",113,391,948,0.1761,0.1726,0.001,0.17514,109,18,True
+S1,control,G2,HCA-DSE as published,44,258,784,0.2271,0.1831,0.00049,0.22666,83,18,True
+S1,control,G3,HCA-DSE + positive waiting bound,44,256,786,0.2977,0.2827,0.00052,0.29719,81,18,True
+S1,control,G4,G3 under the determinants-late order,42,592,1988,0.8771,0.8281,0.00062,0.87648,79,18,True
+S1,sensing,G0,exhaustive oracle,1080,1080,0,0.0095,0.0093,0.00697,0.0025,84,11,True
+S1,sensing,G1,"generic B&B, partial-cost bound",34,388,1336,0.5078,0.5008,0.00049,0.50735,56,11,True
+S1,sensing,G1c,"generic B&B, same two-stage protocol and caching",34,388,1337,0.2225,0.2173,0.0004,0.22211,688,11,True
+S1,sensing,G2m,"HCA-DSE, contention term zeroed",142,474,1139,0.2054,0.1981,0.00138,0.20399,128,11,True
+S1,sensing,G2,HCA-DSE as published,33,241,776,0.1493,0.1472,0.00035,0.14893,63,11,True
+S1,sensing,G3,HCA-DSE + positive waiting bound,33,221,718,0.2369,0.2318,0.00042,0.23645,74,11,True
+S1,sensing,G4,G3 under the determinants-late order,33,305,1006,0.4167,0.4013,0.00043,0.41623,67,11,True
+S2,telemetry,G0,exhaustive oracle,3888,3888,0,0.0545,0.0531,0.02626,0.02824,641,27,True
+S2,telemetry,G1,"generic B&B, partial-cost bound",73,1320,5070,2.1066,2.0852,0.00092,2.1057,96,27,True
+S2,telemetry,G1c,"generic B&B, same two-stage protocol and caching",72,1318,5097,1.0291,0.9692,0.00091,1.02822,2530,27,True
+S2,telemetry,G2m,"HCA-DSE, contention term zeroed",204,930,2681,0.5106,0.502,0.00196,0.50862,158,27,True
+S2,telemetry,G2,HCA-DSE as published,72,625,2152,0.5638,0.4585,0.00092,0.56286,122,27,True
+S2,telemetry,G3,HCA-DSE + positive waiting bound,72,617,2156,0.7949,0.7769,0.00081,0.79405,125,27,True
+S2,telemetry,G4,G3 under the determinants-late order,70,1630,6081,2.7266,2.4017,0.00111,2.72545,108,27,True
+S2,control,G0,exhaustive oracle,3888,3888,0,0.0494,0.0474,0.0237,0.02573,644,25,True
+S2,control,G1,"generic B&B, partial-cost bound",291,1535,4871,2.1169,2.1123,0.0039,2.11298,339,25,True
+S2,control,G1c,"generic B&B, same two-stage protocol and caching",68,1204,4784,0.8728,0.8551,0.00083,0.87196,2353,25,True
+S2,control,G2m,"HCA-DSE, contention term zeroed",164,834,2515,0.5232,0.4876,0.00183,0.52142,154,25,True
+S2,control,G2,HCA-DSE as published,68,616,2143,0.4748,0.4523,0.0008,0.47399,104,25,True
+S2,control,G3,HCA-DSE + positive waiting bound,68,608,2140,0.7593,0.7496,0.00076,0.75858,109,25,True
+S2,control,G4,G3 under the determinants-late order,66,1636,6123,2.4763,2.4538,0.0011,2.47525,107,25,True
+S2,sensing,G0,exhaustive oracle,3888,3888,0,0.0577,0.0358,0.02842,0.02929,335,16,True
+S2,sensing,G1,"generic B&B, partial-cost bound",64,1161,4502,1.6858,1.6572,0.00098,1.68484,87,16,True
+S2,sensing,G1c,"generic B&B, same two-stage protocol and caching",64,1161,4509,0.795,0.7826,0.0009,0.79414,2226,16,True
+S2,sensing,G2m,"HCA-DSE, contention term zeroed",282,1152,3209,0.6328,0.6278,0.0029,0.62995,273,16,True
+S2,sensing,G2,HCA-DSE as published,64,636,2250,0.5192,0.5035,0.00087,0.51834,138,16,True
+S2,sensing,G3,HCA-DSE + positive waiting bound,64,552,1987,0.7104,0.6773,0.00083,0.70961,112,16,True
+S2,sensing,G4,G3 under the determinants-late order,64,805,2993,1.3044,1.2814,0.00102,1.30336,112,16,True
+S3,telemetry,G0,exhaustive oracle,34560,34560,0,0.433,0.4227,0.27731,0.15573,4301,31,True
+S3,telemetry,G1,"generic B&B, partial-cost bound",89,6576,29368,12.1711,12.108,0.00128,12.1698,112,31,True
+S3,telemetry,G1c,"generic B&B, same two-stage protocol and caching",88,6571,29396,6.0811,5.8947,0.00116,6.0799,13385,31,True
+S3,telemetry,G2m,"HCA-DSE, contention term zeroed",247,2862,10731,2.3945,2.3112,0.0039,2.39059,208,31,True
+S3,telemetry,G2,HCA-DSE as published,88,2426,9785,2.2166,2.1742,0.00106,2.21556,126,31,True
+S3,telemetry,G3,HCA-DSE + positive waiting bound,88,2404,9795,3.9348,3.88,0.00105,3.93377,125,31,True
+S3,telemetry,G4,G3 under the determinants-late order,86,5750,23419,10.183,9.8803,0.00123,10.1818,140,31,True
+S3,control,G0,exhaustive oracle,34560,34560,0,0.3771,0.3491,0.25757,0.11957,3057,27,True
+S3,control,G1,"generic B&B, partial-cost bound",897,7741,29737,14.6048,13.7592,0.01392,14.59086,1032,27,True
+S3,control,G1c,"generic B&B, same two-stage protocol and caching",81,6412,29029,6.4371,5.8725,0.00153,6.4356,13153,27,True
+S3,control,G2m,"HCA-DSE, contention term zeroed",205,2754,10519,2.4478,2.4292,0.0023,2.44554,205,27,True
+S3,control,G2,HCA-DSE as published,81,2411,9768,2.4215,2.3768,0.00107,2.42042,139,27,True
+S3,control,G3,HCA-DSE + positive waiting bound,81,2394,9780,4.1111,3.9171,0.00097,4.11015,122,27,True
+S3,control,G4,G3 under the determinants-late order,79,5783,23556,9.7516,9.6388,0.00109,9.75055,124,27,True
+S3,sensing,G0,exhaustive oracle,34560,34560,0,0.3613,0.3352,0.23137,0.12993,3760,27,True
+S3,sensing,G1,"generic B&B, partial-cost bound",117,7415,32920,13.862,12.9856,0.00181,13.8602,147,27,True
+S3,sensing,G1c,"generic B&B, same two-stage protocol and caching",117,7415,32941,5.9653,5.9633,0.00161,5.96368,14989,27,True
+S3,sensing,G2m,"HCA-DSE, contention term zeroed",530,4350,15497,3.4839,3.4781,0.00617,3.47776,529,27,True
+S3,sensing,G2,HCA-DSE as published,117,3297,13355,2.979,2.8536,0.00157,2.97743,177,27,True
+S3,sensing,G3,HCA-DSE + positive waiting bound,117,2670,11019,4.3776,4.2671,0.00152,4.3761,161,27,True
+S3,sensing,G4,G3 under the determinants-late order,117,3410,14296,7.11,6.9981,0.00192,7.10813,161,27,True

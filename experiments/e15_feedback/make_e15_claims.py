@@ -13,6 +13,18 @@ adm1 = json.load((R / "admissible_S1.json").open())
 adm2 = json.load((R / "admissible_S2.json").open())
 s3 = [r for r in rows if r["scale"] == "S3"]
 tab = [r for r in rows if r.get("table_evaluator_calls")]
+audit = json.load((R / "numerical_audit.json").open())
+
+
+def sci(v):
+    """v as m\\times10^{e} with one decimal, for TeX math."""
+    m, e = ("%.1e" % v).split("e")
+    return r"%s\times10^{%d}" % (m, int(e))
+
+
+tol_change = max(a["max_relative_objective_change"] for a in audit
+                 if a["tolerance"] == 1e-12 and a["reference_tolerance"] == 1e-14)
+assert all(a["feasibility_changes"] == 0 and a["front_membership_changes"] == 0 for a in audit)
 
 
 def ran(vals, d=0, sep=r"\text{--}"):
@@ -45,6 +57,10 @@ macros = {
     "FbAdmChecks": thin(sum(a["checks"] for a in adm1)),
     "FbAdmPrefixTwo": thin(adm2[0]["prefixes"]),
     "FbAdmChecksTwo": thin(sum(a["checks"] for a in adm2)),
+    "FbTolChange": sci(tol_change),
+    "FbAuditCases": str(len({(a["scale"], a["workload"]) for a in audit})),
+    "FbAdmExcess": "%.0f" % (1e12 * max(a.get("max_relative_excess", 0.0)
+                                        for a in adm1 + adm2)),
 }
 assert all(r["exact"] == "True" for r in rows), "a run did not reproduce the retry front"
 
@@ -93,7 +109,12 @@ prose = (
     r"($\FbRedAll\times$ across all scales). A separate directed-interval audit checks all "
     r"live S1 prefixes and seeded adversarial samples on S2--S3; it finds no unsafe "
     r"feasibility or dominance prune after the numerical repair. This is an empirical "
-    r"implementation audit, not formal verification. The fixed point itself converges in "
+    r"implementation audit, not formal verification. Checked against every completion of "
+    r"every prefix of S1 (\FbAdmChecks{} pairs) and S2 (\FbAdmChecksTwo{} pairs), the bounds "
+    r"never exceed the objectives the evaluator returns by more than "
+    r"$\FbAdmExcess\times10^{-12}$ in relative terms; Proposition~\ref{prop:fp} is stated for "
+    r"the exact fixed point, and the evaluator stops its iteration at a relative residual of "
+    r"$10^{-12}$. The fixed point itself converges in "
     r"\FbIterMean{} iterations on average and \FbIterMax{} at worst."
     "\n\n"
     r"The term is consequential but not dominant: screening with the closed-form model of "

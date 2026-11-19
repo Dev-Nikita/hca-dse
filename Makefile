@@ -1,5 +1,5 @@
 PYTHON ?= python3
-RELEASE ?= release-20261112
+RELEASE ?= release-20261113
 DATA = results/$(RELEASE)/data
 
 .PHONY: verify assets test reproduce

@@ -59,8 +59,8 @@ def test_s1_matrix():
             assert (stats.n_evaluated, stats.n_nodes) == expected[(workload, name)], (
                 workload, name, stats.n_evaluated, stats.n_nodes,
                 expected[(workload, name)])
-        # the retraction, as a test: the generic bound is not beaten on calls
-        assert expected[(workload, "G1c")][0] <= expected[(workload, "G2")][0]
+        # Proposition 5: the dominating bound never spends more full evaluations
+        assert expected[(workload, "G2")][0] <= expected[(workload, "G1c")][0]
 
 
 if __name__ == "__main__":

@@ -1,0 +1,74 @@
+[
+ {
+  "scale": "B1",
+  "workload": "vision",
+  "compared": 2592,
+  "structurally_valid": 2592,
+  "near_boundary": 72,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0,
+  "front": 59,
+  "search_front_equal": true,
+  "generic_front_equal": true,
+  "other_orders": 2,
+  "other_orders_equal": true,
+  "production_valid": 2592
+ },
+ {
+  "scale": "B1",
+  "workload": "fusion",
+  "compared": 2592,
+  "structurally_valid": 2592,
+  "near_boundary": 32,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0,
+  "front": 54,
+  "search_front_equal": true,
+  "generic_front_equal": true,
+  "other_orders": 2,
+  "other_orders_equal": true,
+  "production_valid": 2592
+ },
+ {
+  "scale": "B1",
+  "workload": "batch",
+  "compared": 2592,
+  "structurally_valid": 2592,
+  "near_boundary": 0,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0,
+  "front": 75,
+  "search_front_equal": true,
+  "generic_front_equal": true,
+  "other_orders": 2,
+  "other_orders_equal": true,
+  "production_valid": 2592
+ },
+ {
+  "scale": "B3",
+  "workload": "vision",
+  "compared": 4000,
+  "structurally_valid": 46656,
+  "near_boundary": 44,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0
+ },
+ {
+  "scale": "B3",
+  "workload": "fusion",
+  "compared": 4000,
+  "structurally_valid": 46656,
+  "near_boundary": 25,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0
+ },
+ {
+  "scale": "B3",
+  "workload": "batch",
+  "compared": 4000,
+  "structurally_valid": 46656,
+  "near_boundary": 0,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0
+ }
+]

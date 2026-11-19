@@ -1,0 +1,47 @@
+[
+ {
+  "scale": "B2",
+  "workload": "vision",
+  "compared": 17496,
+  "structurally_valid": 17496,
+  "near_boundary": 216,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0,
+  "front": 123,
+  "search_front_equal": true,
+  "generic_front_equal": true,
+  "other_orders": 2,
+  "other_orders_equal": true,
+  "production_valid": 17496
+ },
+ {
+  "scale": "B2",
+  "workload": "fusion",
+  "compared": 17496,
+  "structurally_valid": 17496,
+  "near_boundary": 99,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0,
+  "front": 143,
+  "search_front_equal": true,
+  "generic_front_equal": true,
+  "other_orders": 2,
+  "other_orders_equal": true,
+  "production_valid": 17496
+ },
+ {
+  "scale": "B2",
+  "workload": "batch",
+  "compared": 17496,
+  "structurally_valid": 17496,
+  "near_boundary": 0,
+  "feasibility_mismatches": 0,
+  "objective_mismatches": 0,
+  "front": 160,
+  "search_front_equal": true,
+  "generic_front_equal": true,
+  "other_orders": 2,
+  "other_orders_equal": true,
+  "production_valid": 17496
+ }
+]

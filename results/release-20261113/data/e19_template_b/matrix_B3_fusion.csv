@@ -1,0 +1,5 @@
+scale,workload,config,raw,evals,nodes,bound_calls,certifications,seconds,eval_seconds,overhead_seconds,front,exact,float_front_equal
+B3,fusion,G0,82944,46656,46656,0,0,19.6704,0.6631,19.0073,174,True,True
+B3,fusion,G1,82944,587,14121,33771,19703,9.7731,0.0124,9.7607,174,True,
+B3,fusion,G2m,82944,1873,6111,9818,3763,4.1529,0.0347,4.1181,174,True,
+B3,fusion,G2,82944,587,3972,7371,3457,2.1767,0.0107,2.166,174,True,

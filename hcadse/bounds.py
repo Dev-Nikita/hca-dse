@@ -68,7 +68,7 @@ def lower_bounds(partial: dict, space: DesignSpace, wl) -> Dict[str, float]:
             opts.add(t1 if i == 0 else ("gw" if i == 1 else t3))
         mult = min(rep_d) if i == 0 else 1
         E += lam * s.w * mult * min(dyn[t] for t in opts) * T
-    E += min(_net_MB_lb(p, rep_d, wl) for p in pol_d) * lam * min(e_min, WAN_E) * T
+    E += min(_transfer_E_lb(p, rep_d, wl, e_min) for p in pol_d) * lam * T
 
     # ---- cost --------------------------------------------------------------
     C_exact = deployment_cost_decimal(
@@ -97,6 +97,21 @@ def _net_MB_lb(policy: str, rep_d, wl) -> float:
     if t1 == "edge":
         v += s[1] + (min(rep_d) - 1) * wl.s_sync
     return v
+
+
+def _transfer_E_lb(policy: str, rep_d, wl, e_access: float) -> float:
+    """Transfer energy per unit rate and time: access hops at the access energy,
+    the WAN hop at the WAN energy (Lemma 2: exact once policy, replication and
+    link class are assigned; the minimum over reachable values before)."""
+    t1, t3 = POLICIES[policy]
+    s = [x.s_in for x in wl.stages]
+    access = s[0]
+    if t1 == "edge":
+        access += s[1] + (min(rep_d) - 1) * wl.s_sync
+    wan = s[2] if t3 == "cloud" else 0.0
+    if t3 != "cloud":
+        access += s[2]
+    return access * e_access + wan * WAN_E
 
 
 def _comm_latency_lb(policy, rep_d, wl, B_max, prop_min) -> float:

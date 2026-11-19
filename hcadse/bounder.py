@@ -8,7 +8,7 @@ from __future__ import annotations
 from typing import Dict, List
 from .model import DesignSpace, POLICIES, WAN_B, WAN_PROP, WAN_E
 from .evaluate import MB_TO_MB
-from .bounds import _comm_latency_lb, _net_MB_lb, _queue_bound, INF
+from .bounds import _comm_latency_lb, _net_MB_lb, _queue_bound, _transfer_E_lb, INF
 from .numeric import deployment_cost_decimal
 from .intervals import certified_lower_bounds, lower_float
 
@@ -134,7 +134,9 @@ class Bounder:
                       min(per[t] for t in o) * T
                       for i, o in enumerate(self._tier_opts(pol_key)))
             self._dyn[key] = dyn
-        E += dyn + n * lam * min(self._cls(partial, "link_cls", "e_min"), WAN_E) * T
+        pols = list(POLICIES) if pol_key is None else [pol_key]
+        e_acc = self._cls(partial, "link_cls", "e_min")
+        E += dyn + min(_transfer_E_lb(p, [rep_min], wl, e_acc) for p in pols) * lam * T
 
         # --- cost ---
         lcost = min(l.cost for l in ([lkk] if lkk else self.space.domain("link_cls")))

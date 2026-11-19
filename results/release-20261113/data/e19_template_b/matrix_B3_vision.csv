@@ -1,0 +1,5 @@
+scale,workload,config,raw,evals,nodes,bound_calls,certifications,seconds,eval_seconds,overhead_seconds,front,exact,float_front_equal
+B3,vision,G0,82944,46656,46656,0,0,13.8085,0.5363,13.2722,139,True,False
+B3,vision,G1,82944,185,12754,30960,18245,8.168,0.0036,8.1645,139,True,
+B3,vision,G2m,82944,1736,5894,9541,3706,3.9136,0.0179,3.8957,139,True,
+B3,vision,G2,82944,185,3198,6429,3272,2.0727,0.0035,2.0692,139,True,

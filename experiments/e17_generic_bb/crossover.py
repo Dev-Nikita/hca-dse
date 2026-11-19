@@ -1,20 +1,17 @@
-"""Where the generic bound overtakes ours as the evaluator gets expensive.
+"""Evaluator-cost crossovers of the controlled comparison.
 
-The controlled comparison leaves the published bound with less search overhead
-and, on six of the nine combinations, one to five more full evaluations than the
-generic bound.  Which of the two is cheaper therefore depends on what one full
-evaluation costs.  With the linear cost model of Section 4.7,
+With the linear cost model of Section 4.7,
 
     T(C_E) = overhead + N C_E,
 
 where `overhead` is the measured wall-clock minus the measured time inside the
-evaluator and N is the number of full evaluations, the two cross at
+evaluator and N is the number of full evaluations, two configurations cross at
 
-    C_E* = (overhead_ours - overhead_generic) / (N_generic - N_ours).
+    C_E* = (overhead_ours - overhead_generic) / (N_generic - N_ours)
 
-Below C_E* the published bound is cheaper, above it the generic bound is. When
-the two spend the same number of evaluations there is no crossover: the lower
-overhead wins at every evaluator cost. The same computation against exhaustive
+when one has the lower overhead and the other spends fewer evaluations.  When the
+proposed bound spends no more evaluations and has the lower overhead there is no
+crossover: it is cheaper at every evaluator cost.  The same computation against exhaustive
 enumeration is reported for reference.
 """
 from __future__ import annotations

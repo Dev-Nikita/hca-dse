@@ -11,10 +11,10 @@ and preserves the analytical Pareto front of the model.
 | Path | Content |
 |---|---|
 | `hcadse/` | model, evaluator, bounds, interval arithmetic, search |
-| `experiments/` | experiment drivers (E1–E18) and the scripts that turn sealed results into tables and numbers |
+| `experiments/` | experiment drivers (E1–E19) and the scripts that turn sealed results into tables and numbers |
 | `tests/` | unit, pruning-safety and regression tests |
 | `testbed/` | containerised edge/gateway/cloud testbed (Go services, Docker Compose specs) |
-| `results/release-20261112/` | sealed release: `data/` (result files), `source/` (code that produced them), `logs/`, `manifest.json` (SHA-256 of every file) |
+| `results/release-20261113/` | sealed release: `data/` (result files), `source/` (code that produced them), `logs/`, `manifest.json` (SHA-256 of every file) |
 
 ## Requirements
 
@@ -55,21 +55,30 @@ timings bit for bit. The decision-regret study (E18) needs no simulation:
 
 ```bash
 python3 experiments/e18_decision_regret/e18_decision_regret.py \
-    results/release-20261112/data/e14_des_endtoend/dumps/S3_*.json.gz \
-    --selections results/release-20261112/data/h6/manifests --out /tmp/e18
+    results/release-20261113/data/e14_des_endtoend/dumps/S3_*.json.gz \
+    --selections results/release-20261113/data/h6/manifests --out /tmp/e18
 ```
 
 See `testbed/README.md` for the containerised measurements.
 
 ## Status and citation
 
-Archived version: 0.1 (12 November 2026), Zenodo DOI
+Each tagged version is archived at Zenodo with its own DOI; the Zenodo record lists all
+versions. Version 0.1 (12 November 2026): DOI
 [10.5281/zenodo.24171466](https://doi.org/10.5281/zenodo.24171466).
 
-Version 0.1 is a fixed research snapshot supporting the reproducibility of the
-accompanying manuscript, which has not yet been peer-reviewed. The verification
-procedure regenerates the reported computational results from the retained data; the
-physical measurements are included as recorded observations and are not re-executed.
+Version 0.2 (November 2026) tightens the transfer-energy term of the bounds, which is now
+exact once policy, replication and link class are assigned, adds a check that the bounds
+dominate the assignment-monotone partial cost on every prefix of S1 and S2, and re-seals
+all bound-dependent results as `release-20261113`. It also adds a second architecture
+template with a fork-join stage graph and per-stage placement (`hcadse/template_b.py`,
+`experiments/e19_template_b/`), whose pruning, feasibility, archive and front are decided
+in exact rational arithmetic, with an independent reference implementation (`oracle.py`)
+and a mutation analysis (`mutation.py`).
+
+The accompanying manuscript has not yet been peer-reviewed. The verification procedure
+regenerates the reported computational results from the retained data; the physical
+measurements are included as recorded observations and are not re-executed.
 
 No open-source licence has been granted at this time; all rights are reserved by the
 author.
