@@ -121,7 +121,8 @@ retry parameters from `hcadse/feedback.py`, so that a model variant changes the 
 and every bound together; at the published parameters its results are unchanged. Earlier
 data and results are unchanged.
 
-Version 0.2.3 re-times the lifted generic bound of E21 (median of three runs, with the
+Version 0.2.3 (21 November 2026, DOI
+[10.5281/zenodo.24426261](https://doi.org/10.5281/zenodo.24426261)) re-times the lifted generic bound of E21 (median of three runs, with the
 rate-independent part of the bound computed once per prefix, as in the proposed bound; the
 bound itself is unchanged, bit for bit) and corrects the wording of two generated
 sentences. Evaluation and state counts are unchanged.
