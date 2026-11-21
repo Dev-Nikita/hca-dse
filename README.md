@@ -11,7 +11,7 @@ and preserves the analytical Pareto front of the model.
 | Path | Content |
 |---|---|
 | `hcadse/` | model, evaluator, bounds, interval arithmetic, search |
-| `experiments/` | experiment drivers (E1–E19) and the scripts that turn sealed results into tables and numbers |
+| `experiments/` | experiment drivers (E1–E22) and the scripts that turn sealed results into tables and numbers |
 | `tests/` | unit, pruning-safety and regression tests |
 | `testbed/` | containerised edge/gateway/cloud testbed (Go services, Docker Compose specs) |
 | `results/release-20261113/` | sealed release: `data/` (result files), `source/` (code that produced them), `logs/`, `manifest.json` (SHA-256 of every file) |
@@ -105,6 +105,15 @@ Version 0.2.1: numerical experiment data and search algorithms are unchanged. It
 the installation instructions (Python 3.12, Z3 on Linux/aarch64) and the record of the
 environments, and changes the wording of one generated paragraph (E19); the generator,
 its recorded output digests and the release manifest are updated accordingly.
+
+Version 0.2.2 adds comparisons with the generic partial-cost bound, each with a protocol
+fixed before the runs: constraint regimes for the closed-form model
+(`experiments/e20_regimes/`), the retry model with the generic bound unlifted and lifted
+through the certified fixed point (`experiments/e21_retry_bb/`), and six retry-model
+variants (`experiments/e22_retry_sensitivity/`). `hcadse/intervals.py` now reads the
+retry parameters from `hcadse/feedback.py`, so that a model variant changes the evaluator
+and every bound together; at the published parameters its results are unchanged. Earlier
+data and results are unchanged.
 
 The accompanying manuscript has not yet been peer-reviewed. The verification procedure
 regenerates the reported computational results from the retained data; the physical

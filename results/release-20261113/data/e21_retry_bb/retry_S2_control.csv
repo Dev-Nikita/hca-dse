@@ -1,0 +1,5 @@
+scale,workload,config,evals,nodes,bound_calls,seconds,overhead_seconds,front,exact
+S2,control,R0,3888,3888,0,0.1032,0.0203,20,True
+S2,control,R1,1045,2614,5071,7.5712,7.5358,20,True
+S2,control,R2,1045,2266,3515,7.2312,7.197,20,True
+S2,control,R3,59,581,2033,3.1625,3.1605,20,True

@@ -28,7 +28,8 @@ EXTRA_DATA = ("e9_per_design_docker.csv", "e9_per_design_local.csv",
               "e13_reliability.csv")
 EXTRA_TREES = ("e14_des_endtoend", "e15_feedback", "e16_lazy_oracle",
                "e17_generic_bb", "e18_decision_regret",
-               "e19_template_b")
+               "e19_template_b", "e20_regimes", "e21_retry_bb",
+               "e22_retry_sensitivity")
 SOURCE_TREES = ("hcadse", "experiments", "testbed", "tests")
 SOURCE_FILES = ("Makefile", "requirements-lock.txt")
 # Paths listed in release-exclude.txt (one per line) are local tooling that no

@@ -15,7 +15,8 @@ REPO = HERE.parent
 EXPECTED = HERE / "expected_outputs.json"
 GENERATORS = ("e14_des_endtoend/make_e14_claims.py", "e15_feedback/make_e15_claims.py",
               "e17_generic_bb/make_e17_claims.py", "e18_decision_regret/make_e18_claims.py",
-              "e19_template_b/make_e19_claims.py")
+              "e19_template_b/make_e19_claims.py",
+              "e20_regimes/make_e20_claims.py")
 
 
 def sha(path):

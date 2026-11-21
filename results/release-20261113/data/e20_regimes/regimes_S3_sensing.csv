@@ -1,0 +1,10 @@
+scale,workload,regime,m,config,evals,nodes,bound_calls,seconds,overhead_seconds,front,feasible,exact
+S3,sensing,tight,0.8,G0,34560,34560,0,0.2833,0.0795,21,5076,True
+S3,sensing,tight,0.8,G1c,85,6608,29399,4.4507,4.4495,21,79,True
+S3,sensing,tight,0.8,G2,85,2802,11447,2.0386,2.0376,21,79,True
+S3,sensing,baseline,1.0,G0,34560,34560,0,0.3281,0.132,27,8127,True
+S3,sensing,baseline,1.0,G1c,117,7415,32941,5.0873,5.0858,27,111,True
+S3,sensing,baseline,1.0,G2,117,3297,13355,2.39,2.3886,27,111,True
+S3,sensing,loose,1.25,G0,34560,34560,0,0.4284,0.2293,33,11105,True
+S3,sensing,loose,1.25,G1c,168,8239,36383,5.767,5.7647,33,157,True
+S3,sensing,loose,1.25,G2,168,3688,14741,2.7402,2.7381,33,157,True

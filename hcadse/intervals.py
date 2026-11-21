@@ -293,7 +293,14 @@ def certified_objectives(design, workload):
     return (latency, energy, Interval.point(cost), network)
 
 
-def certified_feedback_lower_bounds(partial, space, workload, soft="0.5", iterations=1000):
+def _retry_parameters(soft):
+    """Soft-target fraction and maximum retry share of hcadse.feedback, read at call
+    time so that a model variant changes the evaluator and every bound together."""
+    from . import feedback
+    return dec(str(feedback.SOFT) if soft is None else soft), dec(str(feedback.MAX_RETRY))
+
+
+def certified_feedback_lower_bounds(partial, space, workload, soft=None, iterations=1000):
     """Safe retry-model lower endpoints from finite monotone iteration below the root."""
     stages = workload.stages
     edge = _dom(space, partial, "edge_cls"); gateway = _dom(space, partial, "gw_cls")
@@ -314,7 +321,8 @@ def certified_feedback_lower_bounds(partial, space, workload, soft="0.5", iterat
     communication = imin(_communication(policy, min(rep), workload, bandwidth, propagation)
                          for policy in policies)
     base_arrival = dec(workload.n_dev)*dec(workload.rate)
-    tau = dec(soft)*dec(workload.deadline)
+    soft, max_retry = _retry_parameters(soft)
+    tau = soft*dec(workload.deadline)
     arrival_lower = base_arrival
     latency = None
     for _ in range(iterations):
@@ -324,10 +332,10 @@ def certified_feedback_lower_bounds(partial, space, workload, soft="0.5", iterat
             return {name: infinite for name in ("L", "E", "C", "D")}
         latency = processing+queue+communication
         if latency.lo <= 0:
-            retry_lower = Decimal(1)
+            retry_lower = Decimal(0)
         else:
             retry_lower = (-(Interval.point(tau)/latency)).exp().lo
-        following = _op(ROUND_FLOOR, lambda: base_arrival*(Decimal(1)+retry_lower))
+        following = _op(ROUND_FLOOR, lambda: base_arrival*(Decimal(1)+max_retry*retry_lower))
         if following <= arrival_lower:
             break
         arrival_lower = following
@@ -410,23 +418,24 @@ def _feedback_full_at(design, workload, arrival):
     return latency, rho
 
 
-def certified_feedback_upper_bracket(design, workload, soft="0.5", iterations=1000):
+def certified_feedback_upper_bracket(design, workload, soft=None, iterations=1000):
     """Return ``(lower, upper, L(upper), rho(upper))`` with certified ``g(U)<=U``."""
     base_arrival = dec(workload.n_dev)*dec(workload.rate)
-    tau = dec(soft)*dec(workload.deadline)
+    soft, max_retry = _retry_parameters(soft)
+    tau = soft*dec(workload.deadline)
     lower = base_arrival
     for _ in range(iterations):
         latency, _ = _feedback_full_at(design, workload, lower)
         if latency is None:
             return None
         retry_lower = (-(Interval.point(tau)/latency)).exp().lo
-        following = _op(ROUND_FLOOR, lambda: base_arrival*(Decimal(1)+retry_lower))
+        following = _op(ROUND_FLOOR, lambda: base_arrival*(Decimal(1)+max_retry*retry_lower))
         if following <= lower:
             break
         lower = following
     scale = max(abs(lower), Decimal(1))
     delta = scale*Decimal("1e-50")
-    ceiling = base_arrival*Decimal(2)
+    ceiling = base_arrival*(Decimal(1)+max_retry)
     for _ in range(52):
         candidate = lower+delta
         if candidate > ceiling:
@@ -434,7 +443,7 @@ def certified_feedback_upper_bracket(design, workload, soft="0.5", iterations=10
         latency, rho = _feedback_full_at(design, workload, candidate)
         if latency is not None:
             retry = (-(Interval.point(tau)/latency)).exp()
-            mapped = Interval.point(base_arrival)*(Interval.point(1)+retry)
+            mapped = Interval.point(base_arrival)*(Interval.point(1)+Interval.point(max_retry)*retry)
             if mapped.hi <= candidate:
                 return lower, candidate, latency, rho
         if candidate == ceiling:

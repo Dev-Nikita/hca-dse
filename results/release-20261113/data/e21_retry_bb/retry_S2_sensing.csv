@@ -1,0 +1,5 @@
+scale,workload,config,evals,nodes,bound_calls,seconds,overhead_seconds,front,exact
+S2,sensing,R0,3888,3888,0,0.071,0.0123,16,True
+S2,sensing,R1,275,1427,4426,1.9128,1.904,16,True
+S2,sensing,R2,275,984,2489,1.6976,1.6891,16,True
+S2,sensing,R3,62,630,2233,2.2643,2.2624,16,True

@@ -1,0 +1,13 @@
+scale,workload,config,evals,nodes,bound_calls,seconds,overhead_seconds,front,exact
+S2,telemetry,R0,3888,3888,0,0.0954,0.0244,22,True
+S2,telemetry,R1,601,2060,5177,3.7434,3.7274,22,True
+S2,telemetry,R1fp,65,1263,4878,12.4318,12.4299,22,True
+S2,telemetry,R3,65,608,2113,2.3932,2.3914,22,True
+S2,control,R0,3888,3888,0,0.1026,0.0199,20,True
+S2,control,R1,646,2038,4939,4.794,4.7709,20,True
+S2,control,R1fp,64,1150,4551,13.7065,13.7042,20,True
+S2,control,R3,64,595,2072,3.1197,3.1175,20,True
+S2,sensing,R0,3888,3888,0,0.0664,0.0146,16,True
+S2,sensing,R1,275,1426,4423,1.9075,1.9007,16,True
+S2,sensing,R1fp,63,1109,4260,8.8186,8.8169,16,True
+S2,sensing,R3,63,631,2232,1.9622,1.9606,16,True

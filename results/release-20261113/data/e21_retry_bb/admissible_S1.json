@@ -1,0 +1,26 @@
+[
+ {
+  "scale": "S1",
+  "workload": "telemetry",
+  "prefixes": 1939,
+  "checks": 29160,
+  "violations": 0,
+  "max_relative_excess": 7.784173539206229e-13
+ },
+ {
+  "scale": "S1",
+  "workload": "control",
+  "prefixes": 1939,
+  "checks": 29160,
+  "violations": 0,
+  "max_relative_excess": 1.966642618015623e-11
+ },
+ {
+  "scale": "S1",
+  "workload": "sensing",
+  "prefixes": 1939,
+  "checks": 29160,
+  "violations": 0,
+  "max_relative_excess": 2.155874706519601e-12
+ }
+]

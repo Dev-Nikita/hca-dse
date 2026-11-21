@@ -1,0 +1,7 @@
+scale,workload,config,evals,nodes,bound_calls,seconds,overhead_seconds,front,exact
+S2,telemetry,R0,3888,3888,0,0.1003,0.024,22,True
+S2,telemetry,R1fp,64,1254,4843,13.6914,13.6893,22,True
+S2,control,R0,3888,3888,0,0.1055,0.0224,20,True
+S2,control,R1fp,59,1129,4472,13.6822,13.68,20,True
+S2,sensing,R0,3888,3888,0,0.0994,0.0128,16,True
+S2,sensing,R1fp,62,1085,4168,10.2301,10.2281,16,True
