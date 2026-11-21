@@ -1,0 +1,7 @@
+scale,workload,config,evals,nodes,bound_calls,seconds,overhead_seconds,front,exact
+S3,telemetry,R0,34560,34560,0,0.8336,0.1166,26,True
+S3,telemetry,R3,80,2406,9739,12.5174,12.5149,26,True
+S3,control,R0,34560,34560,0,0.8492,0.0989,22,True
+S3,control,R3,72,2371,9629,14.5469,14.5445,22,True
+S3,sensing,R0,34560,34560,0,0.7572,0.1174,27,True
+S3,sensing,R3,115,3290,13322,13.9923,13.9889,27,True

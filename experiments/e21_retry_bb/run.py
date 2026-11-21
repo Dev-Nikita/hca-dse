@@ -34,7 +34,7 @@ from hcadse import search as search_mod  # noqa: E402
 from hcadse.bounder import Bounder  # noqa: E402
 from hcadse.metrics import objset  # noqa: E402
 from hcadse.numeric import decimal_value  # noqa: E402
-from hcadse.model import VAR_ORDER, WORKLOADS, make_space  # noqa: E402
+from hcadse.model import POLICIES, VAR_ORDER, WORKLOADS, make_space  # noqa: E402
 from hcadse.search import exhaustive, hca_dse, structurally_valid  # noqa: E402
 
 
@@ -93,6 +93,36 @@ class R1fp(R1):
         finally:
             self.wl = self._wl0
 
+    def _queue(self, p, wl):
+        """The rate-dependent part of the certified partial-cost latency: the waiting
+        time of every tier that the assigned variables determine, with the same
+        expressions as PartialCostBounder._bounds; None if a tier saturates."""
+        if "policy" not in p or "rep" not in p:
+            return iv.Interval.point(0)
+        t1, t3 = POLICIES[p["policy"]]
+        tiers = (t1, "gw", t3)
+        arrival = iv.Interval.point(wl.n_dev) * wl.rate
+        total = iv.Interval.point(0)
+        for tier, requirements in (("edge", ("n_e", "edge_cls")), ("gw", ("n_g", "gw_cls")),
+                                   ("cloud", ("cloud_cls",))):
+            if any(name not in p for name in requirements):
+                continue
+            indices = [i for i, t in enumerate(tiers) if t == tier]
+            if not indices:
+                continue
+            cls = p[requirements[-1]]
+            count = p[requirements[0]] if len(requirements) == 2 else 1
+            load = iv.Interval.point(0)
+            for index in indices:
+                load += arrival * wl.stages[index].w * (p["rep"] if index == 0 else 1)
+            rho = load / (iv.Interval.point(count) * cls.C)
+            if rho.hi >= 1:
+                return None
+            for index in indices:
+                service = iv.Interval.point(wl.stages[index].w) / cls.C
+                total += service * rho / (iv.Interval.point(2) * (iv.Interval.point(1) - rho))
+        return total
+
     def certify(self, p):
         key = self._key(p)
         if key in self._certified:
@@ -103,19 +133,28 @@ class R1fp(R1):
         base = n * iv.dec(w0.rate)
         soft, max_retry = iv._retry_parameters(None)
         tau = soft * iv.dec(w0.deadline)
+        # the rate-independent part of the latency is computed once, outside the
+        # iteration; only the waiting time is recomputed at each iterate
+        self.use_queue_bound = False
+        try:
+            fixed = self._bounds(p)["L"]
+        finally:
+            self.use_queue_bound = True
         z = base
         try:
-            for _ in range(feedback.ITERS):
-                self.wl = dataclasses.replace(w0, rate=iv._op(iv.ROUND_FLOOR, lambda: z / n))
-                lat = self._bounds(p)["L"]
-                if lat.lo == iv.DINF:
-                    break
-                q = (iv.Decimal(0) if lat.lo <= 0
-                     else (-(iv.Interval.point(tau) / lat)).exp().lo)
-                nxt = iv._op(iv.ROUND_FLOOR, lambda: base * (iv.Decimal(1) + max_retry * q))
-                if nxt <= z:
-                    break
-                z = nxt
+            if fixed.lo != iv.DINF:
+                for _ in range(feedback.ITERS):
+                    wl = dataclasses.replace(w0, rate=iv._op(iv.ROUND_FLOOR, lambda: z / n))
+                    queue = self._queue(p, wl)
+                    if queue is None:
+                        break
+                    lat = fixed + queue
+                    q = (iv.Decimal(0) if lat.lo <= 0
+                         else (-(iv.Interval.point(tau) / lat)).exp().lo)
+                    nxt = iv._op(iv.ROUND_FLOOR, lambda: base * (iv.Decimal(1) + max_retry * q))
+                    if nxt <= z:
+                        break
+                    z = nxt
             self.wl = dataclasses.replace(w0, rate=iv._op(iv.ROUND_FLOOR, lambda: z / n))
             out = self._wrap(p)
         finally:

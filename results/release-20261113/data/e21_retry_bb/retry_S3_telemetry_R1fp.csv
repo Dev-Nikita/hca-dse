@@ -1,3 +1,0 @@
-scale,workload,config,evals,nodes,bound_calls,seconds,overhead_seconds,front,exact
-S3,telemetry,R0,34560,34560,0,0.8628,0.1195,26,True
-S3,telemetry,R1fp,80,6340,28327,87.2745,87.2719,26,True

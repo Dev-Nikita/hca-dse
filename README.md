@@ -16,6 +16,10 @@ and preserves the analytical Pareto front of the model.
 | `testbed/` | containerised edge/gateway/cloud testbed (Go services, Docker Compose specs) |
 | `results/release-20261113/` | sealed release: `data/` (result files), `source/` (code that produced them), `logs/`, `manifest.json` (SHA-256 of every file) |
 
+The `git_head` field of `manifest.json` records the commit of the author's working
+repository at sealing time; it is not a commit of this repository. The SHA-256 entries
+identify every sealed file.
+
 ## Requirements
 
 Python 3.12 (NumPy 2.5 and SciPy 1.18 do not install on Python 3.10 or 3.11).
@@ -101,12 +105,14 @@ template with a fork-join stage graph and per-stage placement (`hcadse/template_
 in exact rational arithmetic, with an independent reference implementation (`oracle.py`)
 and a mutation analysis (`mutation.py`).
 
-Version 0.2.1: numerical experiment data and search algorithms are unchanged. It corrects
+Version 0.2.1 (20 November 2026, DOI
+[10.5281/zenodo.24394702](https://doi.org/10.5281/zenodo.24394702)): numerical experiment data and search algorithms are unchanged. It corrects
 the installation instructions (Python 3.12, Z3 on Linux/aarch64) and the record of the
 environments, and changes the wording of one generated paragraph (E19); the generator,
 its recorded output digests and the release manifest are updated accordingly.
 
-Version 0.2.2 adds comparisons with the generic partial-cost bound, each with a protocol
+Version 0.2.2 (21 November 2026, DOI
+[10.5281/zenodo.24425265](https://doi.org/10.5281/zenodo.24425265)) adds comparisons with the generic partial-cost bound, each with a protocol
 fixed before the runs: constraint regimes for the closed-form model
 (`experiments/e20_regimes/`), the retry model with the generic bound unlifted and lifted
 through the certified fixed point (`experiments/e21_retry_bb/`), and six retry-model
@@ -114,6 +120,11 @@ variants (`experiments/e22_retry_sensitivity/`). `hcadse/intervals.py` now reads
 retry parameters from `hcadse/feedback.py`, so that a model variant changes the evaluator
 and every bound together; at the published parameters its results are unchanged. Earlier
 data and results are unchanged.
+
+Version 0.2.3 re-times the lifted generic bound of E21 (median of three runs, with the
+rate-independent part of the bound computed once per prefix, as in the proposed bound; the
+bound itself is unchanged, bit for bit) and corrects the wording of two generated
+sentences. Evaluation and state counts are unchanged.
 
 The accompanying manuscript has not yet been peer-reviewed. The verification procedure
 regenerates the reported computational results from the retained data; the physical
